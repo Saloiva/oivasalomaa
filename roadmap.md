@@ -5,3 +5,4 @@
 - [ ] Add 360journalismia links (teatteri, Susijengi article + reel, katugallup, Muijat rullaa)
 - [ ] Fact-check content against sources
 - [ ] Add Instagram (oivasalomaa) and LinkedIn links
+- [ ] Remove Kuurojen liitto from camp leader orgs (he was only freelance writer there)
