@@ -1,10 +1,10 @@
 # Roadmap
-- [x] Rewrite all copy to sound more professional
-- [x] Crop story images (remove extra background)
-- [x] Order Kuurojen Lehti stories: Media murroksessa 4/25, Malmi 1/26, Avaruus 2/26, Kirkko 3/26
-- [x] Add 360journalismia links (teatteri, Susijengi article + reel, katugallup, Muijat rullaa)
-- [x] Fact-check content against sources
-- [x] Add Instagram (oivasalomaa) and LinkedIn links
-- [x] Remove Kuurojen liitto from camp leader orgs (he was only freelance writer there)
-- [x] Fix line wrapping of work periods in Työkokemus
-- [x] Add organisation logos to Työkokemus
+- [ ] Location: "Helsinki" only (no Punavuori)
+- [ ] Crop portrait tighter
+- [ ] Career goal (communications / listed-company comms) more prominent, professional wording everywhere
+- [ ] Rewrite Sanoma description (less corny) + McDonald's description
+- [ ] Kuurojen Lehti: newest first (3/2026 → 4/2025)
+- [ ] Logos: use LinkedIn logos; fix Casino Helsinki corner space
+- [ ] Sanoma dates not crowding the logo (layout spacing)
+- [ ] Decide which work experiences to keep/condense
+- [ ] More premium look
