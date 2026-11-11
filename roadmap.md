@@ -6,3 +6,4 @@
 - [ ] Fact-check content against sources
 - [ ] Add Instagram (oivasalomaa) and LinkedIn links
 - [ ] Remove Kuurojen liitto from camp leader orgs (he was only freelance writer there)
+- [ ] Fix line wrapping of work periods in Työkokemus
