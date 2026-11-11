@@ -147,7 +147,7 @@ function Index() {
 
       {/* Experience */}
       <section id="tyokokemus" className="mx-auto max-w-7xl scroll-mt-6 px-5 py-16 sm:px-8">
-        <SectionHeading number="03" title="Työkokemus" kicker="2019 – 2026" />
+        <SectionHeading number="03" title="Työkokemus" kicker="Uusin ensin" />
         <ol>
           {experience.map((job) => (
             <li
