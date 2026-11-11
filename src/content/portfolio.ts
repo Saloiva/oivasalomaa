@@ -206,7 +206,7 @@ export const experience: Job[] = [
     meta: "Osa-aikainen · Helsinki",
     logo: casinoLogo.url,
     description:
-      "Ruletin pelinhoito pääosin viikonloppujen ilta- ja yövuoroissa. Vastuualueina rahankäsittely, asiakaspalvelu ja pelin sujuva kulku. Asiakaskunta oli kansainvälinen, ja työkielenä toimi pääosin englanti.",
+      "Ruletin pelinhoito pääosin loppuviikon ilta- ja yövuoroissa. Vastuualueina rahankäsittely, asiakaspalvelu ja pelin sujuva kulku. Asiakaskunta oli kansainvälinen, ja työkielenä toimi pääosin englanti.",
   },
   {
     role: "Freelance-toimittaja",
