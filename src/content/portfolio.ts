@@ -1,7 +1,16 @@
-import kirkkoImg from "@/assets/suomea_kirkko_kerrallaan.jpg.asset.json";
-import malmiImg from "@/assets/malmin_perinto.jpg.asset.json";
-import avaruusImg from "@/assets/avaruusharrastus.jpg.asset.json";
-import mediaImg from "@/assets/media_murroksessa.jpg.asset.json";
+import casinoLogo from "@/assets/logo_casino_helsinki.png.asset.json";
+import kuurojenLiittoLogo from "@/assets/logo_kuurojen_liitto.png.asset.json";
+import klvlLogo from "@/assets/logo_klvl.png.asset.json";
+import skulLogo from "@/assets/logo_skul.png.asset.json";
+import lapciLogo from "@/assets/logo_lapci.png.asset.json";
+import sanomaLogo from "@/assets/logo_sanoma.png.asset.json";
+import mcdonaldsLogo from "@/assets/logo_mcdonalds.png.asset.json";
+import sMarketLogo from "@/assets/logo_s_market.png.asset.json";
+import prismaLogo from "@/assets/logo_prisma.png.asset.json";
+import kirkkoImg from "@/assets/suomea_kirkko_kerrallaan_rajattu.jpg.asset.json";
+import malmiImg from "@/assets/malmin_perinto_rajattu.jpg.asset.json";
+import avaruusImg from "@/assets/avaruusharrastus_rajattu.jpg.asset.json";
+import mediaImg from "@/assets/media_murroksessa_rajattu.jpg.asset.json";
 
 export const profile = {
   name: "Oiva Salomaa",
@@ -185,86 +194,96 @@ export type Job = {
   period: string;
   meta?: string;
   description: string;
-  sub?: { org: string; period: string }[];
+  logo?: string;
+  sub?: { org: string; period: string; logo?: string; monogram?: string }[];
 };
 
 export const experience: Job[] = [
   {
     role: "Pelinhoitaja (Casino Dealer)",
-    org: "Veikkaus · Casino Helsinki",
-    period: "Huhti – Elo 2026",
+    org: "Veikkaus Oy · Casino Helsinki",
+    period: "4/2026 – 8/2026",
     meta: "Osa-aikainen · Helsinki",
+    logo: casinoLogo.url,
     description:
-      "Pelinhoitajana rulettipöydässä ilta- ja yövuoroissa. Rahankäsittelyä, asiakaspalvelua ja pelin pitämistä käynnissä kansainväliselle asiakaskunnalle englanniksi.",
+      "Ruletin pelinhoito pääosin viikonloppujen ilta- ja yövuoroissa. Vastuualueina rahankäsittely, asiakaspalvelu ja pelin sujuva kulku. Asiakaskunta oli kansainvälinen, ja työkielenä toimi pääosin englanti.",
   },
   {
-    role: "Freelance-kirjoittaja",
+    role: "Freelance-toimittaja",
     org: "Kuurojen Liitto ry · Kuurojen Lehti",
-    period: "Loka 2025 – Elo 2026",
+    period: "10/2025 – 8/2026",
     meta: "Freelance · Etätyö",
-    description: "Henkilöjuttuja ja Nuorisopalsta-kolumneja Kuurojen Lehteen.",
+    logo: kuurojenLiittoLogo.url,
+    description:
+      "Henkilöjuttuja ja Nuorisopalsta-kolumneja Kuurojen Lehteen. Julkaistuja juttuja numeroissa 4/2025, 1/2026, 2/2026 ja 3/2026.",
   },
   {
-    role: "Leiriohjaaja · lasten ja nuorten ohjaaja",
+    role: "Lasten ja nuorten ohjaaja · leiriohjaaja",
     org: "Kuuloalan järjestöt",
-    period: "Heinä 2022 – 2026",
-    meta: "Osa-aikainen · noin neljä vuotta",
-    description: "Leirien ja toiminnan ohjaamista kuulovammaisille lapsille ja nuorille useissa kuuloalan järjestöissä.",
+    period: "7/2022 – 10/2026",
+    meta: "Osa-aikainen",
+    description:
+      "Leirien ja vapaa-ajan toiminnan ohjaamista kuulovammaisille lapsille ja nuorille. Työssä korostuvat vastuullisuus, ryhmänhallinta sekä viittomakielen ja puhutun kielen joustava käyttö.",
     sub: [
-      { org: "Kuulovammaisten Lasten Vanhempien Liitto ry (KLVL)", period: "Tammi 2025 – Loka 2026" },
-      { org: "Suomen Kuurojen Urheiluliitto ry (SKUL)", period: "Maalis – Syys 2026" },
-      { org: "LapCI ry", period: "Huhti 2023 – Syys 2026" },
-      { org: "Kuurojen Palvelusäätiö sr", period: "Helmi 2025 – Maalis 2026" },
-      { org: "Kuurojen liitto ry", period: "Leiriohjaaja" },
+      { org: "Kuulovammaisten Lasten Vanhempien Liitto ry (KLVL)", period: "1/2025 – 10/2026", logo: klvlLogo.url },
+      { org: "Suomen Kuurojen Urheiluliitto ry (SKUL)", period: "3/2026 – 9/2026", logo: skulLogo.url },
+      { org: "LapCI ry", period: "4/2023 – 9/2026", logo: lapciLogo.url },
+      { org: "Kuurojen Palvelusäätiö sr", period: "2/2025 – 3/2026", monogram: "KPS" },
     ],
   },
   {
     role: "Myyntineuvottelija (Sales Specialist)",
     org: "Sanoma Media Finland Oy",
-    period: "Touko – Heinä & Joulu 2025",
+    period: "5/2025 – 7/2025, 12/2025",
     meta: "Osa-aikainen · Vantaa",
+    logo: sanomaLogo.url,
     description:
-      "Puhelinmyyntiä Vantaan Sanomalasta. Markkinoin entisille ja nykyisille tilaajille Sanoma-konsernin lehtiä, kuten Helsingin Sanomia, Me Naiset -lehteä ja Gloriaa.",
+      "Puhelinmyyntiä Sanoman Vantaan toimipisteestä Sanomalasta. Tehtävänä oli tarjota entisille ja nykyisille tilaajille konsernin lehtiä, kuten Helsingin Sanomia, Me Naisia ja Gloriaa.",
   },
   {
     role: "Ravintolatyöntekijä (Crew Member)",
     org: "McDonald’s",
-    period: "Heinä 2022 – Elo 2024",
+    period: "7/2022 – 8/2024",
     meta: "Kesätyö · pääkaupunkiseutu",
+    logo: mcdonaldsLogo.url,
     description:
-      "Tarjoilua, kuormien purkua varastoon, ruokalähettien tilausten pakkaamista, siivousta ja ruoanvalmistusta alusta loppuun. Pitkiä vuoroja paineen alla.",
+      "Monipuolisia ravintolatehtäviä: asiakaspalvelua, tavaravastaanottoa, kotiinkuljetustilausten kokoamista, siisteydestä huolehtimista sekä ruoanvalmistusta. Työ kehitti paineensietokykyä ja tiimityötaitoja kiireisessä ympäristössä.",
     sub: [
-      { org: "McDonald’s Pitäjänmäki", period: "Touko – Elo 2024" },
-      { org: "McDonald’s Teollisuuskatu", period: "Heinä – Elo 2023" },
-      { org: "McDonald’s Suomenoja", period: "Heinä 2022" },
+      { org: "McDonald’s Pitäjänmäki", period: "5/2024 – 8/2024" },
+      { org: "McDonald’s Teollisuuskatu", period: "7/2023 – 8/2023" },
+      { org: "McDonald’s Suomenoja", period: "7/2022" },
     ],
   },
   {
-    role: "Hyllyttäjä",
-    org: "S-Market Lähderanta",
-    period: "Heinä 2021",
+    role: "Myymälätyöntekijä",
+    org: "S-market Lähderanta",
+    period: "7/2021",
     meta: "Tutustu ja tienaa -jakso",
-    description: "Tavaroiden hyllytystä ja myymälätyötä peruskoulun päätyttyä.",
+    logo: sMarketLogo.url,
+    description: "Tuotteiden hyllytystä ja myymälätyötä peruskoulun päättymisen jälkeen.",
   },
   {
     role: "TET-harjoittelija",
     org: "Prisma Olari",
     period: "8. luokka",
     meta: "Kaksi viikkoa",
-    description: "Kaikenlaisten kuormien purkua ja tavaroiden käsittelyä.",
+    logo: prismaLogo.url,
+    description: "Tavaravastaanottoa ja tuotteiden käsittelyä myymälässä.",
   },
   {
     role: "Taksvärkkipäivä",
     org: "Prisma Sello",
     period: "7. luokka",
-    description: "Kuormien purkua ja tavaroiden lajittelua hyllyihin kakkoskerroksessa.",
+    meta: "Yksi päivä",
+    logo: prismaLogo.url,
+    description: "Saapuvien kuormien purkua ja tuotteiden hyllytystä.",
   },
 ];
 
 export const education = [
-  { degree: "Medianomi, journalismin opinnot", school: "Haaga-Helia ammattikorkeakoulu", period: "2026 –" },
+  { degree: "Medianomi (AMK), journalismi", school: "Haaga-Helia ammattikorkeakoulu", period: "2026 –" },
   { degree: "Journalismin polkuopinnot", school: "Haaga-Helia, avoin AMK", period: "2025" },
-  { degree: "Ylioppilas", school: "Espoon yhteislyseon lukio", period: "2021 – 2024" },
+  { degree: "Ylioppilastutkinto", school: "Espoon yhteislyseon lukio", period: "2021 – 2024" },
 ];
 
 export const languages = [
@@ -276,9 +295,9 @@ export const languages = [
 
 export const interests = [
   "Talous",
-  "Politiikka – paikallistaso Suomessa",
-  "Eurooppa ja globaali politiikka",
-  "Pörssiyhtiöiden viestintä",
-  "Media ja saavutettavuus",
+  "Kotimainen politiikka ja kuntapolitiikka",
+  "EU ja kansainvälinen politiikka",
+  "Yritys- ja sijoittajaviestintä",
+  "Median murros ja saavutettavuus",
   "Kuurojen kulttuuri ja historia",
 ];
