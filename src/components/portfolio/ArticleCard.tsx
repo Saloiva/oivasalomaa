@@ -42,10 +42,12 @@ export function ArticleCard({ article, featured = false }: { article: Article; f
       </DialogTrigger>
       <DialogContent className="max-h-[92vh] max-w-5xl overflow-y-auto rounded-none border-2 border-foreground bg-background p-0 sm:rounded-none">
         <div className="grid gap-0 md:grid-cols-[1fr_1.1fr]">
-          <div className="border-b-2 border-foreground bg-muted md:border-b-0 md:border-r-2">
+          <div className="self-stretch border-b-2 border-foreground bg-muted md:border-b-0 md:border-r-2">
+            <div className="md:sticky md:top-0">
             <a href={article.image} target="_blank" rel="noreferrer" title="Avaa kuva isona">
-              <img src={article.image} alt={article.imageAlt} className="h-full w-full object-contain" />
+              <img src={article.image} alt={article.imageAlt} className="w-full object-contain" />
             </a>
+            </div>
           </div>
           <div className="p-6 sm:p-10">
             <DialogHeader className="text-left">
