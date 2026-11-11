@@ -6,21 +6,32 @@ import mediaImg from "@/assets/media_murroksessa.jpg.asset.json";
 export const profile = {
   name: "Oiva Salomaa",
   title: "Journalismin opiskelija · Haaga-Helia",
-  tagline: "Tuleva toimittaja ja viestijä. Kiinnostuksena politiikka, talous ja viestintä.",
+  tagline: "Toimittaja ja viestijä, jota kiinnostavat erityisesti politiikka, talous ja yhteiskunnallinen viestintä.",
   phone: "044 0105255",
   phoneHref: "tel:+358440105255",
   email: "oiva.salomaa@gmail.com",
   location: "Helsinki, Punavuori",
+  instagram: { handle: "@oivasalomaa", url: "https://www.instagram.com/oivasalomaa/" },
+  linkedin: { handle: "Oiva Salomaa", url: "https://www.linkedin.com/in/oiva-salomaa-2a0aa5327/" },
 };
 
 export const about: string[] = [
-  "Olen valmistunut Espoon yhteislyseon lukiosta keväällä 2024. Ensimmäiset työkokemukseni ovat S-osuuskaupalla. Seitsemännen luokan keväällä suoritin taksvärkkipäiväni Sellon Prismassa. Tehtäväni oli purkaa tulevia kuormia ja lajitella tavaroita hyllyihin kakkoskerroksessa. Kahdeksannella luokalla olin kahden viikon pituisen TET-jaksoni ajan Olarin Prismassa, jossa purin jo kaikenlaista tavaraa. Peruskoulun päätyttyä olin Tutustu ja tienaa -työjaksolla Lähderannan S-marketissa.",
-  "Seuraavat kolme kesää olin eri McDonald’seissa (Suomenoja, Teollisuuskatu, Pitäjänmäki). Ravintoloissa pääsin tarjoilemaan ruokia, purkamaan rekkakuljetuksia varastoon, pakkaamaan ruokalähettien tilauksia, siivoamaan ravintolan sisäpuolta sekä ympäristöä ja valmistamaan ruokia alusta loppuun. Opin toimimaan pitkiä vuoroja paineen alla kovassakin metelissä ja tulemaan toimeen erilaisten ihmisten kanssa.",
-  "Vuonna 2025 pääsin Sanoma Media Finland Oy:lle töihin myyntineuvottelijaksi. Soitin puheluita Vantaan Sanomalasta käsin. Asiakkaat olivat joko entisiä tai nykyisiä tilaajia, ja tehtäväni oli markkinoida heille Sanoma-konsernin lehtiä, kuten Helsingin Sanomia, Me Naiset -lehteä ja Gloriaa.",
-  "Viimeisin työkokemukseni on Casino Helsingiltä, jossa toimin pelinhoitajana rulettipöydässä. Työvuoroni kohdistuivat pääasiassa loppuviikkoon, iltoihin ja öihin. Käsittelin rahaa, palvelin asiakkaita ja pidin rulettipelin käynnissä. Tehtävä edellytti paljon englannin kielen taitoa, sillä asiakaskunta oli hyvin kansainvälistä.",
-  "Olen julkaissut kaksi videota 360journalismia-mediaan. Toisessa käsittelen sitä, miksi Susijengin valtava suosio ei näy paikallisotteluiden yleisömäärissä. Toinen oli katugallup, jossa kysyin Kampissa ihmisiltä, kuinka usein he käyvät teatterissa. Se liittyi omaan artikkeliini näytelmästä Kolme harjoitelmaa sodan ja rakkauden vuosilta, jonka kävin katsomassa Suomen Kansallisteatterin Pienellä näyttämöllä.",
-  "Lisäksi olen työskennellyt kuuloalan järjestöillä ohjaajana peräti neljän vuoden ajan. Olen kiinnostunut taloudesta ja politiikasta erityisesti paikallistasolla Suomessa, mutta myös Euroopan ja sitäkin suuremmin globaalissa mittakaavassa. Asun Helsingissä Punavuoressa. Haluan suuntautua mahdollisesti jonkin pörssiyrityksen viestintään.",
+  "Opiskelen journalismia Haaga-Helia ammattikorkeakoulussa. Ennen tutkinto-opintojani suoritin journalismin polkuopinnot Haaga-Helian avoimessa AMK:ssa vuonna 2025. Ylioppilaaksi valmistuin Espoon yhteislyseon lukiosta keväällä 2024.",
+  "Kirjoitan freelancerina Kuurojen Lehteen, jossa minulta on julkaistu Nuorisopalsta-kolumneja sekä henkilöjuttuja. 360journalismia-mediaan olen tehnyt artikkeleita ja videojuttuja muun muassa koripallosta, teatterista ja liikunnasta. Suomi ja suomalainen viittomakieli ovat molemmat äidinkieliäni, ja tuon kuurojen yhteisön näkökulman luontevasti osaksi journalistista työtäni.",
+  "Työkokemusta minulla on asiakaspalvelusta, myynnistä ja ohjaustyöstä. Casino Helsingissä työskentelin pelinhoitajana rulettipöydässä kansainvälisen asiakaskunnan parissa, pääosin ilta- ja yövuoroissa. Sanoma Media Finlandilla toimin myyntineuvottelijana ja markkinoin konsernin lehtiä, kuten Helsingin Sanomia, Me Naisia ja Gloriaa, entisille ja nykyisille tilaajille.",
+  "Kolme kesää McDonald’sin ravintoloissa opetti työskentelemään tehokkaasti paineen alla ja tulemaan toimeen hyvin erilaisten ihmisten kanssa. Ensimmäiset työkokemukseni hankin S-ryhmän myymälöistä. Lisäksi olen toiminut noin neljän vuoden ajan lasten ja nuorten ohjaajana useissa kuuloalan järjestöissä.",
+  "Seuraan erityisesti taloutta ja politiikkaa – paikallistasolla Suomessa, Euroopassa ja globaalisti. Tavoitteenani on suuntautua viestintään, mahdollisesti pörssiyhtiön viestintätehtäviin. Asun Helsingin Punavuoressa.",
 ];
+
+export const keyFacts: [string, string][] = [
+  ["4", "julkaistua juttua Kuurojen Lehdessä"],
+  ["5", "julkaisua 360journalismia-mediassa"],
+  ["4 v", "kokemusta lasten ja nuorten ohjaajana"],
+  ["2", "äidinkieltä: suomi ja suomalainen viittomakieli"],
+];
+
+export const careerGoal =
+  "Tavoitteena suuntautua viestintään, mahdollisesti pörssiyhtiön viestintätehtäviin.";
 
 export type Article = {
   slug: string;
