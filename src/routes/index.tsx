@@ -299,7 +299,17 @@ function Index() {
   );
 }
 
-function OrgLogo({ src, monogram, name, small = false }: { src?: string; monogram?: string; name: string; small?: boolean }) {
+function OrgLogo({
+  src,
+  monogram,
+  name,
+  small = false,
+}: {
+  src?: string | undefined;
+  monogram?: string | undefined;
+  name: string;
+  small?: boolean;
+}) {
   const size = small ? "h-10 w-10" : "h-14 w-14";
   return (
     <div className={`${size} shrink-0 overflow-hidden border-2 border-foreground bg-card`}>
