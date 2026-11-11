@@ -15,7 +15,7 @@ export function ArticleCard({ article, featured = false }: { article: Article; f
               src={article.image}
               alt={article.imageAlt}
               loading="lazy"
-              className={`w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] ${featured ? "aspect-[4/3]" : "aspect-[16/11]"}`}
+              className={`w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03] ${featured ? "aspect-[4/3]" : "aspect-[16/11]"}`}
             />
             {article.column && (
               <span className="eyebrow absolute left-3 top-3 bg-highlight px-2 py-1 text-highlight-foreground">
@@ -24,7 +24,9 @@ export function ArticleCard({ article, featured = false }: { article: Article; f
             )}
           </div>
           <div className="mt-5 flex items-center gap-3 eyebrow text-muted-foreground">
-            <span>{article.publication}</span>
+            <span>
+              {article.publication} {article.issue}
+            </span>
             <span aria-hidden>·</span>
             <span>{article.pages}</span>
           </div>
@@ -52,7 +54,7 @@ export function ArticleCard({ article, featured = false }: { article: Article; f
           <div className="p-6 sm:p-10">
             <DialogHeader className="text-left">
               <span className="eyebrow text-muted-foreground">
-                {article.publication}
+                {article.publication} {article.issue}
                 {article.column ? ` · ${article.column}` : ""} · {article.pages}
               </span>
               <DialogTitle className="headline pt-2 text-4xl sm:text-5xl">{article.title}</DialogTitle>
@@ -70,7 +72,7 @@ export function ArticleCard({ article, featured = false }: { article: Article; f
               </div>
             ) : (
               <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                Koko juttu on luettavissa lehtiaukeamalta. Avaa kuva isommaksi napsauttamalla sitä.
+                Koko juttu on luettavissa lehtiaukeamalta. Napsauta kuvaa avataksesi sen suurempana.
               </p>
             )}
           </div>
