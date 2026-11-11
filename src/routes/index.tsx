@@ -1,9 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import portrait from "@/assets/oiva_salomaa_portrait.jpg.asset.json";
 import { ArticleCard } from "@/components/portfolio/ArticleCard";
 import { SectionHeading } from "@/components/portfolio/SectionHeading";
-import { about, articles, education, experience, interests, languages, otherWork, profile } from "@/content/portfolio";
+import {
+  about,
+  articles,
+  careerGoal,
+  education,
+  experience,
+  interests,
+  keyFacts,
+  languages,
+  otherWork,
+  profile,
+} from "@/content/portfolio";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -75,6 +86,12 @@ function Index() {
               <a href={profile.phoneHref} className="inline-flex items-center gap-2 hover:underline underline-offset-4">
                 <Phone className="h-4 w-4" /> {profile.phone}
               </a>
+              <a href={profile.instagram.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:underline underline-offset-4">
+                <Instagram className="h-4 w-4" /> {profile.instagram.handle}
+              </a>
+              <a href={profile.linkedin.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:underline underline-offset-4">
+                <Linkedin className="h-4 w-4" /> LinkedIn
+              </a>
               <span className="inline-flex items-center gap-2">
                 <MapPin className="h-4 w-4" /> {profile.location}
               </span>
@@ -90,12 +107,7 @@ function Index() {
 
         {/* Key facts strip */}
         <dl className="mt-16 grid grid-cols-2 border-y border-foreground md:grid-cols-4">
-          {[
-            ["4", "julkaistua juttua Kuurojen Lehdessä"],
-            ["3", "juttua 360journalismia-mediaan"],
-            ["4 v", "ohjaajana kuuloalan järjestöissä"],
-            ["2", "äidinkieltä: suomi ja viittomakieli"],
-          ].map(([k, v], i) => (
+          {keyFacts.map(([k, v], i) => (
             <div key={v} className={`px-4 py-6 ${i > 0 ? "md:border-l" : ""} ${i % 2 === 1 ? "border-l md:border-l" : ""} ${i > 1 ? "border-t md:border-t-0" : ""} border-foreground`}>
               <dt className="headline text-5xl">{k}</dt>
               <dd className="mt-2 text-base text-muted-foreground">{v}</dd>
@@ -131,16 +143,34 @@ function Index() {
         </div>
 
         <div className="mt-20">
-          <h3 className="eyebrow mb-6 border-b border-foreground pb-3">Muut työt · 360journalismia</h3>
-          <ul className="grid md:grid-cols-3">
-            {otherWork.map((w, i) => (
-              <li
-                key={w.title}
-                className={`border-b border-foreground py-6 md:border-b-0 md:py-2 ${i > 0 ? "md:border-l md:pl-6" : ""} md:pr-6`}
-              >
-                <span className="eyebrow bg-foreground px-2 py-1 text-background">{w.kind}</span>
-                <h4 className="headline mt-4 text-2xl leading-tight">{w.title}</h4>
-                <p className="mt-3 text-base leading-relaxed text-muted-foreground">{w.description}</p>
+          <h3 className="eyebrow mb-2 border-b border-foreground pb-3">360journalismia · artikkelit ja videot</h3>
+          <ul>
+            {otherWork.map((w) => (
+              <li key={w.url} className="border-b border-border">
+                <a
+                  href={w.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group grid gap-3 py-7 md:grid-cols-[11rem_1fr_auto] md:gap-8"
+                >
+                  <div className="space-y-2">
+                    <p className="eyebrow whitespace-nowrap">{w.date}</p>
+                    <span className="eyebrow inline-block bg-foreground px-2 py-1 text-background">{w.kind}</span>
+                  </div>
+                  <div>
+                    <h4 className="headline text-2xl leading-tight md:text-3xl">
+                      <span className="box-decoration-clone bg-no-repeat transition-[background-size] duration-500 marker [background-size:0%_100%] group-hover:[background-size:100%_100%]">
+                        {w.title}
+                      </span>
+                    </h4>
+                    <p className="mt-3 max-w-3xl text-base leading-relaxed text-foreground/80 md:text-lg">{w.description}</p>
+                    <p className="eyebrow mt-3 text-muted-foreground">{w.credits}</p>
+                  </div>
+                  <span className="eyebrow inline-flex items-center gap-1 self-start whitespace-nowrap md:pt-1">
+                    {w.linkLabel}
+                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </span>
+                </a>
               </li>
             ))}
           </ul>
@@ -154,24 +184,30 @@ function Index() {
           {experience.map((job) => (
             <li
               key={job.role + job.org}
-              className="grid gap-3 border-b border-border py-8 first:pt-0 md:grid-cols-[13rem_1fr_1fr] md:gap-8"
+              className="grid gap-4 border-b border-border py-8 first:pt-0 md:grid-cols-[11rem_1fr_1fr] md:gap-8"
             >
               <div>
-                <p className="eyebrow">{job.period}</p>
+                <p className="eyebrow whitespace-nowrap">{job.period}</p>
                 {job.meta && <p className="mt-1 text-sm text-muted-foreground">{job.meta}</p>}
               </div>
-              <div>
-                <h3 className="headline text-3xl leading-tight">{job.role}</h3>
-                <p className="mt-1 text-lg">{job.org}</p>
+              <div className="flex items-start gap-4">
+                {job.logo && <OrgLogo src={job.logo} name={job.org} />}
+                <div>
+                  <h3 className="headline text-3xl leading-tight">{job.role}</h3>
+                  <p className="mt-1 text-lg">{job.org}</p>
+                </div>
               </div>
               <div>
                 <p className="text-lg leading-relaxed text-foreground/80">{job.description}</p>
                 {job.sub && (
-                  <ul className="mt-4 space-y-2">
+                  <ul className="mt-4 space-y-3">
                     {job.sub.map((s) => (
-                      <li key={s.org} className="flex flex-wrap justify-between gap-x-4 border-l-4 border-highlight pl-3 text-base">
-                        <span>{s.org}</span>
-                        <span className="eyebrow self-center text-muted-foreground">{s.period}</span>
+                      <li key={s.org} className="flex items-center gap-3 border-l-4 border-highlight pl-3">
+                        {(s.logo || s.monogram) && <OrgLogo src={s.logo} monogram={s.monogram} name={s.org} small />}
+                        <div className="min-w-0">
+                          <p className="text-base leading-snug">{s.org}</p>
+                          <p className="eyebrow mt-0.5 whitespace-nowrap text-muted-foreground">{s.period}</p>
+                        </div>
                       </li>
                     ))}
                   </ul>
@@ -218,9 +254,7 @@ function Index() {
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-lg leading-relaxed text-foreground/80">
-              Tavoitteena suuntautua viestintään – mahdollisesti pörssiyhtiön viestintätehtäviin.
-            </p>
+            <p className="mt-6 text-lg leading-relaxed text-foreground/80">{careerGoal}</p>
           </div>
         </div>
       </section>
@@ -230,7 +264,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
           <p className="eyebrow">05 · Yhteystiedot</p>
           <h2 className="headline mt-4 text-5xl sm:text-7xl md:text-8xl">Otetaan yhteyttä.</h2>
-          <div className="mt-12 grid gap-6 border-t-2 border-highlight-foreground pt-8 md:grid-cols-3">
+          <div className="mt-12 grid gap-8 border-t-2 border-highlight-foreground pt-8 sm:grid-cols-2 lg:grid-cols-3">
             <a href={`mailto:${profile.email}`} className="group">
               <p className="eyebrow">Sähköposti</p>
               <p className="mt-2 inline-flex items-center gap-2 text-2xl group-hover:underline underline-offset-4">
@@ -241,6 +275,18 @@ function Index() {
               <p className="eyebrow">Puhelin</p>
               <p className="mt-2 text-2xl group-hover:underline underline-offset-4">{profile.phone}</p>
             </a>
+            <a href={profile.instagram.url} target="_blank" rel="noreferrer" className="group">
+              <p className="eyebrow">Instagram</p>
+              <p className="mt-2 inline-flex items-center gap-2 text-2xl group-hover:underline underline-offset-4">
+                {profile.instagram.handle} <ArrowUpRight className="h-5 w-5" />
+              </p>
+            </a>
+            <a href={profile.linkedin.url} target="_blank" rel="noreferrer" className="group">
+              <p className="eyebrow">LinkedIn</p>
+              <p className="mt-2 inline-flex items-center gap-2 text-2xl group-hover:underline underline-offset-4">
+                {profile.linkedin.handle} <ArrowUpRight className="h-5 w-5" />
+              </p>
+            </a>
             <div>
               <p className="eyebrow">Sijainti</p>
               <p className="mt-2 text-2xl">{profile.location}</p>
@@ -249,6 +295,21 @@ function Index() {
           <p className="eyebrow mt-16">© 2026 Oiva Salomaa</p>
         </div>
       </footer>
+    </div>
+  );
+}
+
+function OrgLogo({ src, monogram, name, small = false }: { src?: string; monogram?: string; name: string; small?: boolean }) {
+  const size = small ? "h-10 w-10" : "h-14 w-14";
+  return (
+    <div className={`${size} shrink-0 overflow-hidden border-2 border-foreground bg-card`}>
+      {src ? (
+        <img src={src} alt={`${name} – logo`} loading="lazy" className="h-full w-full object-contain" />
+      ) : (
+        <span className="flex h-full w-full items-center justify-center font-mono text-[0.6rem] font-semibold tracking-wider">
+          {monogram}
+        </span>
+      )}
     </div>
   );
 }
