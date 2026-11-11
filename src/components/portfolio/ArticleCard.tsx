@@ -29,7 +29,7 @@ export function ArticleCard({ article, featured = false }: { article: Article; f
             <span>{article.pages}</span>
           </div>
           <h3 className={`headline mt-2 ${featured ? "text-4xl md:text-5xl" : "text-3xl"}`}>
-            <span className="bg-no-repeat transition-[background-size] duration-500 marker [background-size:0%_100%] group-hover:[background-size:100%_100%]">
+            <span className="box-decoration-clone bg-no-repeat transition-[background-size] duration-500 marker [background-size:0%_100%] group-hover:[background-size:100%_100%]">
               {article.title}
             </span>
           </h3>
