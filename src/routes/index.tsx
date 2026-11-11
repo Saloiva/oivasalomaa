@@ -35,7 +35,8 @@ const nav = [
 ];
 
 function Index() {
-  const [featured, second, ...rest] = articles;
+  const featuredArticles = articles.slice(0, 2);
+  const rest = articles.slice(2);
 
   return (
     <div className="min-h-screen">
@@ -119,8 +120,9 @@ function Index() {
       <section id="julkaisut" className="mx-auto max-w-7xl scroll-mt-6 px-5 py-16 sm:px-8">
         <SectionHeading number="02" title="Julkaisut" kicker="Kuurojen Lehti · 360journalismia" />
         <div className="grid gap-12 lg:grid-cols-2">
-          <ArticleCard article={featured} featured />
-          <ArticleCard article={second} featured />
+          {featuredArticles.map((a) => (
+            <ArticleCard key={a.slug} article={a} featured />
+          ))}
         </div>
         <div className="mt-14 grid gap-12 md:grid-cols-2">
           {rest.map((a) => (
