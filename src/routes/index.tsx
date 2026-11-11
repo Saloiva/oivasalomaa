@@ -310,7 +310,7 @@ function OrgLogo({
   name: string;
   small?: boolean;
 }) {
-  const size = small ? "h-10 w-10" : "h-14 w-14";
+  const size = small ? "h-10 w-16" : "h-14 w-14";
   return (
     <div className={`${size} shrink-0 overflow-hidden border-2 border-foreground bg-card`}>
       {src ? (

@@ -15,7 +15,7 @@ export function ArticleCard({ article, featured = false }: { article: Article; f
               src={article.image}
               alt={article.imageAlt}
               loading="lazy"
-              className={`w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] ${featured ? "aspect-[4/3]" : "aspect-[16/11]"}`}
+              className={`w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03] ${featured ? "aspect-[4/3]" : "aspect-[16/11]"}`}
             />
             {article.column && (
               <span className="eyebrow absolute left-3 top-3 bg-highlight px-2 py-1 text-highlight-foreground">

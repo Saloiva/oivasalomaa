@@ -1,8 +1,8 @@
 import casinoLogo from "@/assets/logo_casino_helsinki.png.asset.json";
 import kuurojenLiittoLogo from "@/assets/logo_kuurojen_liitto.png.asset.json";
-import klvlLogo from "@/assets/logo_klvl.png.asset.json";
-import skulLogo from "@/assets/logo_skul.png.asset.json";
-import lapciLogo from "@/assets/logo_lapci.png.asset.json";
+import klvlLogo from "@/assets/logo_klvl_vaaka.png.asset.json";
+import skulLogo from "@/assets/logo_skul_vaaka.png.asset.json";
+import lapciLogo from "@/assets/logo_lapci_vaaka.png.asset.json";
 import sanomaLogo from "@/assets/logo_sanoma.png.asset.json";
 import mcdonaldsLogo from "@/assets/logo_mcdonalds.png.asset.json";
 import sMarketLogo from "@/assets/logo_s_market.png.asset.json";
@@ -150,7 +150,7 @@ export const otherWork: OtherWork[] = [
   {
     kind: "Video · Instagram",
     title: "Miksi maajoukkue kerää yleisöä eri tavalla kuin kotimainen sarja?",
-    date: "Maaliskuu 2026",
+    date: "17.3.2026",
     credits: "Oiva Salomaa",
     description: "Lyhytvideo Susijengi-artikkelin rinnalle 360journalismian Instagramiin.",
     url: "https://www.instagram.com/reels/DV9nuHfgkTn/",
