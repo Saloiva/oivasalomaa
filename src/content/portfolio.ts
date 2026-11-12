@@ -1,303 +1,420 @@
-import casinoLogo from "@/assets/logo_casino_helsinki.png.asset.json";
-import kuurojenLiittoLogo from "@/assets/logo_kuurojen_liitto.png.asset.json";
-import klvlLogo from "@/assets/logo_klvl_vaaka.png.asset.json";
-import skulLogo from "@/assets/logo_skul_vaaka.png.asset.json";
-import lapciLogo from "@/assets/logo_lapci_vaaka.png.asset.json";
-import sanomaLogo from "@/assets/logo_sanoma.png.asset.json";
-import mcdonaldsLogo from "@/assets/logo_mcdonalds.png.asset.json";
-import sMarketLogo from "@/assets/logo_s_market.png.asset.json";
-import prismaLogo from "@/assets/logo_prisma.png.asset.json";
+import veikkausLogo from "@/assets/logo_li_veikkaus.jpg.asset.json";
+import kuurojenLiittoLogo from "@/assets/logo_li_kuurojen_liitto.jpg.asset.json";
+import klvlLogo from "@/assets/logo_li_klvl.jpg.asset.json";
+import skulLogo from "@/assets/logo_li_skul.jpg.asset.json";
+import lapciLogo from "@/assets/logo_li_lapci.jpg.asset.json";
+import kpsLogo from "@/assets/logo_li_kps.jpg.asset.json";
+import sanomaLogo from "@/assets/logo_li_sanoma.jpg.asset.json";
+import mcdonaldsLogo from "@/assets/logo_li_mcdonalds.jpg.asset.json";
+import portraitImg from "@/assets/oiva_salomaa_muotokuva.jpg.asset.json";
 import kirkkoImg from "@/assets/suomea_kirkko_kerrallaan_rajattu.jpg.asset.json";
 import malmiImg from "@/assets/malmin_perinto_rajattu.jpg.asset.json";
 import avaruusImg from "@/assets/avaruusharrastus_rajattu.jpg.asset.json";
 import mediaImg from "@/assets/media_murroksessa_rajattu.jpg.asset.json";
 
+export type Lang = "fi" | "en";
+/** A text in both site languages. */
+export type L = { fi: string; en: string };
+const l = (fi: string, en: string): L => ({ fi, en });
+
+export const portrait = portraitImg.url;
+
 export const profile = {
   name: "Oiva Salomaa",
-  title: "Journalismin opiskelija · Haaga-Helia",
-  tagline: "Toimittaja ja viestijä, jota kiinnostavat erityisesti politiikka, talous ja yhteiskunnallinen viestintä.",
-  phone: "044 0105255",
-  phoneHref: "tel:+358440105255",
+  title: l("Journalismin opiskelija · Haaga-Helia", "Journalism student · Haaga-Helia"),
+  tagline: l(
+    "Toimittaja ja viestijä, joka tekee huolellisesti taustoitettua journalismia ja seuraa taloutta, sijoittamista ja yhteiskuntaa.",
+    "Journalist and communicator producing well-researched stories, with a keen interest in economics, investing and society.",
+  ),
   email: "oiva.salomaa@gmail.com",
-  location: "Helsinki, Punavuori",
+  location: l("Helsinki", "Helsinki, Finland"),
   instagram: { handle: "@oivasalomaa", url: "https://www.instagram.com/oivasalomaa/" },
   linkedin: { handle: "Oiva Salomaa", url: "https://www.linkedin.com/in/oiva-salomaa-2a0aa5327/" },
 };
 
-export const about: string[] = [
-  "Opiskelen journalismia Haaga-Helia ammattikorkeakoulussa. Ennen tutkinto-opintojani suoritin journalismin polkuopinnot Haaga-Helian avoimessa AMK:ssa vuonna 2025. Ylioppilaaksi valmistuin Espoon yhteislyseon lukiosta keväällä 2024.",
-  "Kirjoitan freelancerina Kuurojen Lehteen, jossa minulta on julkaistu Nuorisopalsta-kolumneja sekä henkilöjuttuja. 360journalismia-mediaan olen tehnyt artikkeleita ja videojuttuja muun muassa koripallosta, teatterista ja liikunnasta. Suomi ja suomalainen viittomakieli ovat molemmat äidinkieliäni, ja tuon kuurojen yhteisön näkökulman luontevasti osaksi journalistista työtäni.",
-  "Työkokemusta minulla on asiakaspalvelusta, myynnistä ja ohjaustyöstä. Casino Helsingissä työskentelin pelinhoitajana rulettipöydässä kansainvälisen asiakaskunnan parissa, pääosin ilta- ja yövuoroissa. Sanoma Media Finlandilla toimin myyntineuvottelijana ja markkinoin konsernin lehtiä, kuten Helsingin Sanomia, Me Naisia ja Gloriaa, entisille ja nykyisille tilaajille.",
-  "Kolme kesää McDonald’sin ravintoloissa opetti työskentelemään tehokkaasti paineen alla ja tulemaan toimeen hyvin erilaisten ihmisten kanssa. Ensimmäiset työkokemukseni hankin S-ryhmän myymälöistä. Lisäksi olen toiminut noin neljän vuoden ajan lasten ja nuorten ohjaajana useissa kuuloalan järjestöissä.",
-  "Seuraan erityisesti taloutta ja politiikkaa – paikallistasolla Suomessa, Euroopassa ja globaalisti. Tavoitteenani on suuntautua viestintään, mahdollisesti pörssiyhtiön viestintätehtäviin. Asun Helsingin Punavuoressa.",
+/** Elevator pitch shown on the home page. */
+export const about: L[] = [
+  l(
+    "Olen helsinkiläinen journalismin opiskelija ja freelance-toimittaja. Opiskelen medianomiksi Haaga-Helia ammattikorkeakoulussa ja kirjoitan henkilöjuttuja ja kolumneja Kuurojen Lehteen. 360journalismia-mediaan olen tuottanut artikkeleita ja videojuttuja urheilusta, kulttuurista ja liikunnasta.",
+    "I am a Helsinki-based journalism student and freelance journalist. I am studying for a Bachelor of Culture and Arts (journalism) at Haaga-Helia University of Applied Sciences and write profiles and columns for Kuurojen Lehti, the magazine of the Finnish Association of the Deaf. For the 360journalismia newsroom I have produced articles and video stories on sport, culture and fitness.",
+  ),
+  l(
+    "Työssäni korostuvat huolellinen tiedonhankinta, selkeä ilmaisu ja kyky kohdata hyvin erilaisia ihmisiä. Työkokemus Sanoma Media Finlandin myynnissä, Veikkauksen Casino Helsingissä ja kuuloalan järjestöjen ohjaajana on opettanut tarkkuutta, vastuullisuutta ja luotettavuutta tehtävissä, joissa virheisiin ei ole varaa.",
+    "My work is built on thorough research, clear expression and the ability to connect with very different people. Experience in sales at Sanoma Media Finland, at Veikkaus’s Casino Helsinki and as a youth leader for hearing-impaired children has taught me accuracy, responsibility and reliability in roles where there is no room for error.",
+  ),
+  l(
+    "Seuraan aktiivisesti taloutta, sijoittamista ja politiikkaa Suomessa, EU:ssa ja globaalisti. Tavoitteeni on toimittajan tehtävä valtakunnallisessa mediassa tai viestinnän tehtävät, esimerkiksi pörssiyhtiössä.",
+    "I closely follow economics, investing and politics in Finland, the EU and globally. My goal is a reporting role at a national news outlet or a position in corporate communications, for example at a listed company.",
+  ),
 ];
 
-export const keyFacts: [string, string][] = [
-  ["4", "julkaistua juttua Kuurojen Lehdessä"],
-  ["5", "julkaisua 360journalismia-mediassa"],
-  ["4 v", "kokemusta lasten ja nuorten ohjaajana"],
-  ["2", "äidinkieltä: suomi ja suomalainen viittomakieli"],
+export const direction: { title: L; text: L }[] = [
+  {
+    title: l("Journalismi", "Journalism"),
+    text: l(
+      "Toimittajan tehtävät valtakunnallisessa mediassa: taustoittavat jutut, henkilöjutut ja ajankohtaisaiheet.",
+      "Reporting for national media: in-depth features, profiles and current affairs.",
+    ),
+  },
+  {
+    title: l("Viestintä", "Communications"),
+    text: l(
+      "Yritys- ja sijoittajaviestintä, erityisesti pörssiyhtiöiden viestintätehtävät.",
+      "Corporate and investor communications, particularly at listed companies.",
+    ),
+  },
+  {
+    title: l("Talous", "Finance"),
+    text: l(
+      "Kiinnostus talouteen, sijoittamiseen ja markkinoiden ilmiöiden selittämiseen ymmärrettävästi.",
+      "A strong interest in economics, investing and explaining market developments clearly.",
+    ),
+  },
 ];
 
-export const careerGoal =
-  "Tavoitteena suuntautua viestintään, mahdollisesti pörssiyhtiön viestintätehtäviin.";
+export const keyFacts: { value: string; label: L }[] = [
+  { value: "4", label: l("julkaistua juttua Kuurojen Lehdessä", "stories published in Kuurojen Lehti") },
+  { value: "5", label: l("julkaisua 360journalismia-mediassa", "pieces for 360journalismia") },
+  { value: "4 v", label: l("kokemusta lasten ja nuorten ohjaajana", "years as a youth leader") },
+];
+
+export const subscribeUrl = "https://kuurojenliitto.fi/kuurojen-lehti/lomake-tilaa-kuurojen-lehti/";
 
 export type Article = {
   slug: string;
+  /** Published (Finnish) title. */
   title: string;
+  titleEn: string;
   publication: string;
   column?: string;
   issue: string;
   pages: string;
-  credits: string;
-  lead: string;
+  credits: L;
+  lead: L;
   image: string;
   imageAlt: string;
-  body?: string[];
+  /** Opening paragraphs only – the full story stays behind the magazine's paywall. */
+  excerpt?: string[];
 };
 
+/** Kuurojen Lehti stories, newest issue first. */
 export const articles: Article[] = [
   {
-    slug: "media-murroksessa",
-    title: "Media murroksessa",
+    slug: "suomea-kirkko-kerrallaan",
+    title: "Suomea kirkko kerrallaan",
+    titleEn: "Finland, one church at a time",
     publication: "Kuurojen Lehti",
-    column: "Nuorisopalsta",
-    issue: "4/2025",
-    pages: "s. 25",
-    credits: "Teksti ja kuva Oiva Salomaa",
-    lead: "Kolumni mediakentän murroksesta: algoritmit, kiire ja siirtymä video- ja äänisisältöihin muuttavat uutisten kulutusta. Mitä muutos merkitsee viittomakieliselle medialle ja sen yleisölle?",
-    image: mediaImg.url,
-    imageAlt: "Lehtisivu: Nuorisopalsta – Media murroksessa",
-    body: [
-      "Myin kesän ajan aikakaus- ja sanomalehtiä suuressa mediatalossa. Näin läheltä, miten kotimainen mediakenttä elää murroksen keskellä. Uskollisten tilaajien ja lopettaneiden lukijoiden välinen kuilu oli kasvussa. Samalla tieto moninkertaistuu. Mikään ei ole niin pysyvää kuin muutos.",
-      "Meillä on nyt enemmän tietoa kuin koskaan. Päivittäin algoritmit näyttävät uusia uutisia Suomesta ja ulkomailta. Usein asiat jäävät monimutkaisiksi ja vaikeiksi ymmärtää. Ihmiset odottavat, miten eri mediat kertovat niistä. Toimitusten on reagoitava nopeasti ja julkaistava tietoa ennen muita, jotta ne pysyvät kilpailussa mukana. Jokaisen sanan ja eleen merkitys korostuu. Kuka tahansa voi saada osakseen arvostelua: niin asiantuntijat, vallankäyttäjät kuin kokijat.",
-      "Algoritmit ohjaavat, mitä uutisia meille näytetään. Usein ihmiset kiinnostuvat asioista, jotka herättävät tunteita. Se, mitä katsotaan, kuunnellaan, luetaan ja jaetaan, tavoittaa suuren yleisön. Mediat ovat huomanneet tämän ja sopeutuneet olemalla siellä, mistä ihmiset tavoitetaan: sosiaalisessa mediassa.",
-      "Kun tiedon kysyntä kasvaa, se asettaa paineita perinteisille mediataloille. Niiden on pystyttävä tuottamaan luotettavaa ja moniäänistä sisältöä. Faktojen tarkistaminen vie aikaa ja vaatii osaamista, mutta siihen ei aina riitä resursseja. Siksi toimitukset käyttävät usein muiden uutistoimistojen tietoja ja täydentävät uutisia, kun uusia yksityiskohtia saadaan.",
-      "Kiire näkyy paitsi toimittajien työssä, myös lukijoissa. Monet lukevat vain otsikot, eivätkä tutustu itse juttuun. Tieto jää silloin pinnalliseksi. Samalla mediaympäristö muuttuu yhä digitaalisemmaksi. Video- ja äänisisällön osuus mediasta kasvaa. Ne palvelevat kuluttajaa ajassa, jossa aika ei tunnu riittävän kaikkeen.",
-      "Aluksi sosiaalinen media oli tärkeä viittomakieliselle yhteisölle. Se avasi pääsyn tekstisisältöön ja helpotti keskustelun seuraamista. Monet viittomakieliset pystyivät paremmin pysymään mukana ajankohtaisissa asioissa.",
-      "Videot madalsivat kynnystä osallistua keskusteluun myös viittomakielellä. Tänä päivänä näkyvät kuitenkin myös muutoksen kääntöpuolet. Alustat ovat siirtyneet vahvasti videoihin ja ääneen, mutta kaikki videot eivät ole esteettömiä. Jos videoissa ei ole tekstitystä, osa yleisöstä jää ulkopuolelle. Tekstitys on tärkeä osa sekä suomenkielistä että viittomakielistä sisältöä.",
-      "Ulla Sivusen tieteellisestä artikkelista vuodelta 2024 selviää, että viittomakieltä käyttävät kuurot ja huonokuuloiset nuoret käyttävät monia kieliä verkossa. Koska suomalaista viittomakielistä mediaa on yhä vähän, he seuraavat usein ulkomaisia viittomakielisiä sisältöjä. Tämä kertoo kotimaisen mediakentän tyhjiöstä: tilasta ja tarpeesta, jota ei ole vielä täytetty.",
-      "Pysyykö viittomakielinen media muutoksen aallonharjalla ja millä tavoin? Vaikka yleisön koko ei määritä asian tärkeyttä, sisältöä tehdään yleisöä varten. Pallo on nyt viittomakielisellä medialla siinä, miten se tavoittaa yhä monipuolisemman kirjon oman mediansa pariin.",
-    ],
-  },
-  {
-    slug: "malmin-perinto",
-    title: "Malmin perintö tuli jäädäkseen",
-    publication: "Kuurojen Lehti",
-    column: "Nuorisopalsta",
-    issue: "1/2026",
-    pages: "s. 15",
-    credits: "Teksti ja kuva Oiva Salomaa",
-    lead: "Kansallista viittomakielten päivää vietettiin 12. helmikuuta, kun Suomen ensimmäisen kuurojenkoulun perustajan Carl Oscar Malmin syntymästä tuli kuluneeksi 200 vuotta. Kolumni hänen perinnöstään ja siitä, miksi saavutetuista oikeuksista on pidettävä kiinni.",
-    image: malmiImg.url,
-    imageAlt: "Lehtisivu: Nuorisopalsta – Malmin perintö tuli jäädäkseen",
-    body: [
-      "Helmikuun 12. päivänä vietettiin kansallista viittomakielten päivää. Tänä vuonna ajankohta sai erityistä painoarvoa, sillä samalla tuli kuluneeksi 200 vuotta Carl Oscar Malmin syntymästä. Juhlavuosi tarjoaa tilaisuuden tarkastella hänen perintöään uudelleen. Liian tuttu kertomus voi vähitellen latistua symboliksi, jonka ohi kuljetaan pysähtymättä.",
-      "C.O. Malm perusti Suomen ensimmäisen kuurojenkoulun Porvooseen ja ilmoitti sen aloittamisesta Borgå Tidning -sanomalehdessä syksyllä 1846. Aikana, jolloin kuuroutta pidettiin yleisesti älyllisen vajavuuden merkkinä, Malmin ajattelu erottui edukseen. Hän oli vakuuttunut siitä, etteivät oppimisen rajat määräydy kuulon perusteella. Tästä lähtökohdasta hän pyrki laajentamaan opetusta mahdollisimman monelle ja siirtämään siitä vastuun valtiolle.",
-      "Valtion osallistuminen toteutui vuonna 1858, kun keisarillinen asetus kuurojenkoulun perustamisesta Turkuun annettiin. Samalla paljastui kuitenkin hyväksynnän kapea raja: Malmia ei katsottu sopivaksi koulun johtoon, sillä tehtävään haluttiin kuuleva henkilö. Johtajaksi nimitettiin opettaja Carl Henrik Alopaeus, jolla ei ollut viittomakielen taitoa. Vastaava asetelma ei ole poikkeuksellinen nykyisinkään.",
-      "Malmin elinaikana kuurous nähtiin ongelmana, jota tuli ensisijaisesti hoitaa lääketieteen keinoin. Hänen kuuloaan yritettiin palauttaa jopa sähkövirran avulla tukholmalaisen lääkärin vastaanotolla. Menetelmät ovat sittemmin kehittyneet, mutta peruslähtökohta on osin säilynyt. Nykyään syntymäkuuroille lapsille annetaan sisäkorvaistutteita. Itsekin keinotekoisen kuulon saaneena tiedän, että se helpottaa toimimista kuulevassa yhteiskunnassa. Se ei kuitenkaan tee minusta vähemmän kuuroa, mikä asettaa minut väliinputoajan asemaan.",
-      "Kuurojen yhteisössä on pitkään kulkenut jakolinja puhuvien ja ei-puhuvien kuurojen välillä. Puhuva kuuro hyväksytään usein helpommin, vaikka puhe ei poistaisi kuuloon liittyviä haasteita. Minulle on tärkeää olla unohtamatta, mistä tulen, ja tuoda näkyviin ne, jotka eivät pääse samaan pöytään. Meillä on yhä matkaa siihen, ettei kenenkään koulutus- tai uravalintoja määritä se, miten kuulee tai mitä kieltä käyttää.",
-      "Yhteinen historia tuli konkreettiseksi viime lokakuussa viittomakielisillä nuorisopäivillä, kun osallistuin opastetulle kierrokselle Porvoossa. Kuurojenkoulun entiset oppilaat Håkan Westerholm ja Janne Kankkonen johdattivat nuoria koulun vaiheisiin. Kankkonen kuului koulun viimeisiin oppilaisiin ennen sen sulkemista vuonna 1993. Menneestä ajasta muistuttaa sisäpihalle pystytetty Malmin patsas, jonka on suunnitellut kuuro kuvanveistäjä J. F. Talvia.",
-      "Malmin elämäntyö osoittaa, ettei mikään saavutettu ole pysyvää. Oikeudet ja mahdollisuudet säilyvät vain, jos niistä pidetään kiinni ja niitä puolustetaan. Mahdollisuus valita oma kieli, yhteisö ja koulutuspolku on pitkälti hänen työnsä ansiota. Vastuu niiden säilymisestä on nykyisillä ja tulevilla sukupolvilla.",
-      "Ilman käsitystä menneisyydestä emme kykene vaikuttamaan nykyhetkeen emmekä rakentamaan tulevaisuutta. Siksi toivon, että viittomakielten päivän merkitystä todella korostetaan. On hyvä muistaa, kuka puun alun perin istutti.",
-    ],
+    issue: "3/2026",
+    pages: "s. 24–25",
+    credits: l("Teksti Oiva Salomaa · Kuvat Päivi ja Petri Mäntylä", "Text Oiva Salomaa · Photos Päivi and Petri Mäntylä"),
+    lead: l(
+      "Jyväskyläläisten Päivi ja Petri Mäntylän matkasuunnitelmat saavat nykyään usein suuntansa kirkoista. Sattumalta alkanut harrastus on vienyt pariskunnan jo 247 suomalaiselle kirkolle ja samalla tutustuttanut heidät paikkoihin, joihin ei muuten ehkä olisi tullut lähdettyä.",
+      "For Päivi and Petri Mäntylä from Jyväskylä, churches now often set the direction of their travels. A hobby that began by chance has taken the couple to 247 Finnish churches – and to places they might otherwise never have visited.",
+    ),
+    image: kirkkoImg.url,
+    imageAlt: "Lehtiaukeama: Suomea kirkko kerrallaan",
   },
   {
     slug: "elamanmittainen-avaruusharrastus",
     title: "Elämänmittainen avaruusharrastus",
+    titleEn: "A lifelong passion for space",
     publication: "Kuurojen Lehti",
     issue: "2/2026",
     pages: "s. 18–19",
-    credits: "Teksti Oiva Salomaa · Kuvat Harry Malmelin",
-    lead: "Harry Malmelinin katse on aina hakeutunut ylöspäin. Avaruuden äärettömyys ja tähtikuvioiden kiehtova historia ovat vieneet miehen mennessään jo yli puoli vuosisataa sitten.",
+    credits: l("Teksti Oiva Salomaa · Kuvat Harry Malmelin", "Text Oiva Salomaa · Photos Harry Malmelin"),
+    lead: l(
+      "Harry Malmelinin katse on aina hakeutunut ylöspäin. Avaruuden äärettömyys ja tähtikuvioiden kiehtova historia ovat vieneet miehen mennessään jo yli puoli vuosisataa sitten.",
+      "Harry Malmelin has always looked upwards. The vastness of space and the fascinating history of the constellations captured him more than half a century ago.",
+    ),
     image: avaruusImg.url,
     imageAlt: "Lehtiaukeama: Elämänmittainen avaruusharrastus",
   },
   {
-    slug: "suomea-kirkko-kerrallaan",
-    title: "Suomea kirkko kerrallaan",
+    slug: "malmin-perinto",
+    title: "Malmin perintö tuli jäädäkseen",
+    titleEn: "Malm’s legacy is here to stay",
     publication: "Kuurojen Lehti",
-    issue: "3/2026",
-    pages: "s. 24–25",
-    credits: "Teksti Oiva Salomaa · Kuvat Päivi ja Petri Mäntylä",
-    lead: "Jyväskyläläisten Päivi ja Petri Mäntylän matkasuunnitelmat saavat nykyään usein suuntansa kirkoista. Sattumalta alkanut harrastus on vienyt pariskunnan jo 247 suomalaiselle kirkolle ja samalla tutustuttanut heidät paikkoihin, joihin ei muuten ehkä olisi tullut lähdettyä.",
-    image: kirkkoImg.url,
-    imageAlt: "Lehtiaukeama: Suomea kirkko kerrallaan",
+    column: "Nuorisopalsta",
+    issue: "1/2026",
+    pages: "s. 15",
+    credits: l("Teksti ja kuva Oiva Salomaa", "Text and photo Oiva Salomaa"),
+    lead: l(
+      "Kansallista viittomakielten päivää vietettiin 12. helmikuuta, kun Suomen ensimmäisen kuurojenkoulun perustajan Carl Oscar Malmin syntymästä tuli kuluneeksi 200 vuotta. Kolumni hänen perinnöstään ja siitä, miksi saavutetuista oikeuksista on pidettävä kiinni.",
+      "Finland’s National Sign Language Day on 12 February marked 200 years since the birth of Carl Oscar Malm, founder of the country’s first school for the deaf. A column on his legacy and why hard-won rights must be defended.",
+    ),
+    image: malmiImg.url,
+    imageAlt: "Lehtisivu: Nuorisopalsta – Malmin perintö tuli jäädäkseen",
+    excerpt: [
+      "Helmikuun 12. päivänä vietettiin kansallista viittomakielten päivää. Tänä vuonna ajankohta sai erityistä painoarvoa, sillä samalla tuli kuluneeksi 200 vuotta Carl Oscar Malmin syntymästä. Juhlavuosi tarjoaa tilaisuuden tarkastella hänen perintöään uudelleen. Liian tuttu kertomus voi vähitellen latistua symboliksi, jonka ohi kuljetaan pysähtymättä.",
+      "C.O. Malm perusti Suomen ensimmäisen kuurojenkoulun Porvooseen ja ilmoitti sen aloittamisesta Borgå Tidning -sanomalehdessä syksyllä 1846. Aikana, jolloin kuuroutta pidettiin yleisesti älyllisen vajavuuden merkkinä, Malmin ajattelu erottui edukseen.",
+    ],
+  },
+  {
+    slug: "media-murroksessa",
+    title: "Media murroksessa",
+    titleEn: "Media in transition",
+    publication: "Kuurojen Lehti",
+    column: "Nuorisopalsta",
+    issue: "4/2025",
+    pages: "s. 25",
+    credits: l("Teksti ja kuva Oiva Salomaa", "Text and photo Oiva Salomaa"),
+    lead: l(
+      "Kolumni mediakentän murroksesta: algoritmit, kiire ja siirtymä video- ja äänisisältöihin muuttavat uutisten kulutusta. Mitä muutos merkitsee viittomakieliselle medialle ja sen yleisölle?",
+      "A column on the changing media landscape: algorithms, speed and the shift to video and audio are transforming how news is consumed. What does this mean for sign-language media and its audience?",
+    ),
+    image: mediaImg.url,
+    imageAlt: "Lehtisivu: Nuorisopalsta – Media murroksessa",
+    excerpt: [
+      "Myin kesän ajan aikakaus- ja sanomalehtiä suuressa mediatalossa. Näin läheltä, miten kotimainen mediakenttä elää murroksen keskellä. Uskollisten tilaajien ja lopettaneiden lukijoiden välinen kuilu oli kasvussa. Samalla tieto moninkertaistuu. Mikään ei ole niin pysyvää kuin muutos.",
+      "Meillä on nyt enemmän tietoa kuin koskaan. Päivittäin algoritmit näyttävät uusia uutisia Suomesta ja ulkomailta. Usein asiat jäävät monimutkaisiksi ja vaikeiksi ymmärtää.",
+    ],
   },
 ];
 
 export type OtherWork = {
-  kind: string;
+  kind: L;
   title: string;
   date: string;
-  credits: string;
-  description: string;
+  credits: L;
+  description: L;
   url: string;
-  linkLabel: string;
+  platform: "web" | "instagram";
 };
 
+/** 360journalismia work, newest first. */
 export const otherWork: OtherWork[] = [
   {
-    kind: "Video",
+    kind: l("Video", "Video"),
     title: "Muijat rullaa -yhteisö saa naiset liikkeelle",
     date: "9.10.2026",
-    credits: "Toimitus Oiva Salomaa · Kuvaus Oiva Salomaa, Sanna Niemi ja Aapo Kämäräinen",
-    description:
-      "Videojuttu toukokuussa 2026 perustetusta pyöräily-yhteisöstä, joka on kasvanut muutamassa kuukaudessa yli tuhannen jäsenen yhteisöksi. Haastateltavina perustaja Hanna Solomon sekä lenkkien vetäjät.",
+    credits: l(
+      "Toimitus Oiva Salomaa · Kuvaus Oiva Salomaa, Sanna Niemi ja Aapo Kämäräinen",
+      "Reporting Oiva Salomaa · Camera Oiva Salomaa, Sanna Niemi and Aapo Kämäräinen",
+    ),
+    description: l(
+      "Videojuttu toukokuussa 2026 perustetusta pyöräily-yhteisöstä, joka kasvoi muutamassa kuukaudessa yli tuhannen jäsenen yhteisöksi. Haastateltavina yhteisön perustaja Hanna Solomon sekä lenkkien vetäjät.",
+      "A video story on a women’s cycling community founded in May 2026 that grew to over a thousand members within months. Featuring founder Hanna Solomon and the ride leaders.",
+    ),
     url: "https://www.360journalismia.fi/muijat-rullaa-saa-naiset-liikkeelle/",
-    linkLabel: "Katso video",
+    platform: "web",
   },
   {
-    kind: "Video · Instagram",
+    kind: l("Video · Instagram", "Video · Instagram"),
     title: "Miksi maajoukkue kerää yleisöä eri tavalla kuin kotimainen sarja?",
     date: "17.3.2026",
-    credits: "Oiva Salomaa",
-    description: "Lyhytvideo Susijengi-artikkelin rinnalle 360journalismian Instagramiin.",
-    url: "https://www.instagram.com/reels/DV9nuHfgkTn/",
-    linkLabel: "Katso Instagramissa",
+    credits: l("Oiva Salomaa", "Oiva Salomaa"),
+    description: l(
+      "Susijengi-artikkelia täydentävä lyhytvideo: miksi maajoukkueen yleisöhuuma ei siirry Korisliigan otteluihin? Julkaistu 360° Median Instagram-tilillä.",
+      "A short video accompanying the Susijengi article: why doesn’t the national team’s crowd appeal carry over to the domestic league? Published on 360° Media’s Instagram.",
+    ),
+    url: "https://www.instagram.com/reel/DV9nuHfgkTn/",
+    platform: "instagram",
   },
   {
-    kind: "Artikkeli",
+    kind: l("Artikkeli", "Article"),
     title: "Susijengi-huuma ei täytä Korisliigan katsomoita",
     date: "16.3.2026",
-    credits: "Teksti ja kuvat Oiva Salomaa",
-    description:
-      "Susijengi täyttää hallit, mutta ilmiö näkyy Korisliigan yleisömäärissä vain osittain. Haastateltavina Heikki Perho (Loimaa Bisons), Mikko-Taneli Mäki (Helsinki Seagulls) ja Heini Santos (Suomen Koripalloliitto).",
+    credits: l("Teksti ja kuvat Oiva Salomaa", "Text and photos Oiva Salomaa"),
+    description: l(
+      "Susijengi täyttää hallit, mutta ilmiö näkyy Korisliigan yleisömäärissä vain osittain. Haastateltavina Loimaa Bisonsin hallituksen jäsen Heikki Perho, Helsinki Seagullsin viestintäpäällikkö Mikko-Taneli Mäki ja Suomen Koripalloliiton viestintä- ja markkinointipäällikkö Heini Santos.",
+      "Finland’s national basketball team fills arenas, but the effect shows only partly in domestic league attendance. Interviewees: Loimaa Bisons board member Heikki Perho, Helsinki Seagulls head of communications Mikko-Taneli Mäki and Finnish Basketball Association communications and marketing manager Heini Santos.",
+    ),
     url: "https://www.360journalismia.fi/susijengi-huuma-ei-tayta-korisliigan-katsomoita/",
-    linkLabel: "Lue juttu",
+    platform: "web",
   },
   {
-    kind: "Artikkeli",
+    kind: l("Artikkeli", "Article"),
     title: "Teatteri jättää tilaa tulkinnalle",
     date: "27.2.2026",
-    credits: "Teksti ja kuva Oiva Salomaa",
-    description:
+    credits: l("Teksti ja kuva Oiva Salomaa", "Text and photo Oiva Salomaa"),
+    description: l(
       "Kansallisteatterin Kolme harjoitelmaa sodan ja rakkauden vuosilta käsittelee Israelin ja Palestiinan konfliktia kolmen suomalaisen naisen näkökulmasta. Haastateltavina teatterintutkija Hanna Korsberg sekä näytelmän kirjoittaja ja ohjaaja Michael Baran.",
+      "The Finnish National Theatre’s play examines the Israeli–Palestinian conflict through the eyes of three Finnish women. Interviewees: theatre scholar Hanna Korsberg and the play’s writer and director Michael Baran.",
+    ),
     url: "https://www.360journalismia.fi/teatteri-jattaa-tilaa-tulkinnalle/",
-    linkLabel: "Lue juttu",
+    platform: "web",
   },
   {
-    kind: "Video · katugallup",
+    kind: l("Video · katugallup", "Video · vox pop"),
     title: "Kuinka usein käyt teatterissa?",
     date: "27.2.2026",
-    credits: "Oiva Salomaa",
-    description:
-      "Katugallup Kampissa: ohikulkijat kertovat teatterissa käynneistään, lippujen hinnoista ja toivomistaan teemoista. Taustalla TINFOn tilastot katsojamäärien kehityksestä.",
+    credits: l("Oiva Salomaa", "Oiva Salomaa"),
+    description: l(
+      "Katugallup Kampissa: ohikulkijat kertovat teatterissa käynneistään, lippujen hinnoista ja toivomistaan aiheista. Taustalla TINFOn tilastot katsojamäärien kehityksestä.",
+      "A vox pop in Kamppi, Helsinki: passers-by on how often they go to the theatre, ticket prices and the themes they want to see – set against TINFO audience statistics.",
+    ),
     url: "https://www.instagram.com/p/DVQiti-jeSd/",
-    linkLabel: "Katso Instagramissa",
+    platform: "instagram",
   },
 ];
 
 export type Job = {
-  role: string;
-  org: string;
-  period: string;
-  meta?: string;
-  description: string;
-  logo?: string;
-  sub?: { org: string; period: string; logo?: string; monogram?: string }[];
+  role: L;
+  org: L;
+  /** One line per period, so separate stints never run together. */
+  periods: string[];
+  meta: L;
+  description: L;
+  logo: string;
+  sub?: { org: string; period: string; logo: string }[];
 };
 
+/** Work experience, newest first. */
 export const experience: Job[] = [
   {
-    role: "Pelinhoitaja (Casino Dealer)",
-    org: "Veikkaus Oy · Casino Helsinki",
-    period: "4/2026 – 8/2026",
-    meta: "Osa-aikainen · Helsinki",
-    logo: casinoLogo.url,
-    description:
-      "Ruletin pelinhoito pääosin loppuviikon ilta- ja yövuoroissa. Vastuualueina rahankäsittely, asiakaspalvelu ja pelin sujuva kulku. Asiakaskunta oli kansainvälinen, ja työkielenä toimi pääosin englanti.",
+    role: l("Pelinhoitaja", "Casino Dealer"),
+    org: l("Veikkaus Oy · Casino Helsinki", "Veikkaus Oy · Casino Helsinki"),
+    periods: ["4/2026 – 8/2026"],
+    meta: l("Osa-aikainen · Helsinki", "Part-time · Helsinki"),
+    logo: veikkausLogo.url,
+    description: l(
+      "Ruletin pelinhoitoa Suomen ainoalla kasinolla, pääosin ilta- ja yövuoroissa. Tehtäviin kuuluivat pelin johtaminen sääntöjen mukaisesti, panosten ja voittojen tarkka käsittely, vastuullisen pelaamisen periaatteiden noudattaminen sekä asiakaspalvelu kansainväliselle asiakaskunnalle, pääosin englanniksi. Tehtävään valitaan taustatarkistuksen kautta, ja se edellyttää tarkkuutta, keskittymiskykyä ja paineensietoa.",
+      "Dealing roulette at Finland’s only casino, mainly on evening and night shifts. Responsibilities included running the game by the rules, handling stakes and payouts accurately, applying responsible-gambling principles and serving an international clientele, mostly in English. The role requires a background check and calls for precision, concentration and composure under pressure.",
+    ),
   },
   {
-    role: "Freelance-toimittaja",
-    org: "Kuurojen Liitto ry · Kuurojen Lehti",
-    period: "10/2025 – 8/2026",
-    meta: "Freelance · Etätyö",
+    role: l("Freelance-toimittaja", "Freelance Journalist"),
+    org: l("Kuurojen Liitto ry · Kuurojen Lehti", "Finnish Association of the Deaf · Kuurojen Lehti"),
+    periods: ["10/2025 – 8/2026"],
+    meta: l("Freelance · etätyö", "Freelance · remote"),
     logo: kuurojenLiittoLogo.url,
-    description:
-      "Henkilöjuttuja ja Nuorisopalsta-kolumneja Kuurojen Lehteen. Julkaistuja juttuja numeroissa 4/2025, 1/2026, 2/2026 ja 3/2026.",
+    description: l(
+      "Henkilöjuttuja ja Nuorisopalsta-kolumneja neljästi vuodessa ilmestyvään aikakauslehteen. Työhön kuuluvat aiheiden ideointi, haastattelut, kirjoittaminen ja kuvaaminen sekä yhteistyö toimituksen kanssa editoinnissa ja aikatauluissa. Juttuja on julkaistu numeroissa 4/2025–3/2026.",
+      "Profiles and youth columns for a magazine published four times a year. The work covers story ideas, interviews, writing and photography, as well as working with the editors on edits and deadlines. Stories published in issues 4/2025–3/2026.",
+    ),
   },
   {
-    role: "Lasten ja nuorten ohjaaja · leiriohjaaja",
-    org: "Kuuloalan järjestöt",
-    period: "7/2022 – 10/2026",
-    meta: "Osa-aikainen",
-    description:
-      "Leirien ja vapaa-ajan toiminnan ohjaamista kuulovammaisille lapsille ja nuorille. Työssä korostuvat vastuullisuus, ryhmänhallinta sekä viittomakielen ja puhutun kielen joustava käyttö.",
+    role: l("Lasten ja nuorten ohjaaja · leiriohjaaja", "Child and Youth Worker · Camp Leader"),
+    org: l("Kuuloalan järjestöt", "Hearing-sector organisations"),
+    periods: ["7/2022 – 10/2026"],
+    meta: l("Osa-aikainen", "Part-time"),
+    logo: klvlLogo.url,
+    description: l(
+      "Leirien, vertaistukitapahtumien ja vapaa-ajan toiminnan ohjaamista kuulovammaisille lapsille ja nuorille. Tehtäviin kuuluvat ohjelman suunnittelu ja toteutus, ryhmänhallinta sekä osallistujien turvallisuudesta ja hyvinvoinnista huolehtiminen. Neljä järjestöä on luottanut minuun toistuvasti useiden vuosien ajan.",
+      "Leading camps, peer-support events and leisure activities for hearing-impaired children and young people. Responsibilities include planning and running programmes, group management and looking after participants’ safety and wellbeing. Four organisations have repeatedly entrusted me with this work over several years.",
+    ),
     sub: [
-      { org: "Kuulovammaisten Lasten Vanhempien Liitto ry (KLVL)", period: "1/2025 – 10/2026", logo: klvlLogo.url },
-      { org: "Suomen Kuurojen Urheiluliitto ry (SKUL)", period: "3/2026 – 9/2026", logo: skulLogo.url },
+      { org: "Kuulovammaisten Lasten Vanhempien Liitto ry", period: "1/2025 – 10/2026", logo: klvlLogo.url },
+      { org: "Suomen Kuurojen Urheiluliitto ry", period: "3/2026 – 9/2026", logo: skulLogo.url },
       { org: "LapCI ry", period: "4/2023 – 9/2026", logo: lapciLogo.url },
-      { org: "Kuurojen Palvelusäätiö sr", period: "2/2025 – 3/2026", monogram: "KPS" },
+      { org: "Kuurojen Palvelusäätiö sr", period: "2/2025 – 3/2026", logo: kpsLogo.url },
     ],
   },
   {
-    role: "Myyntineuvottelija (Sales Specialist)",
-    org: "Sanoma Media Finland Oy",
-    period: "5/2025 – 7/2025, 12/2025",
-    meta: "Osa-aikainen · Vantaa",
+    role: l("Myyntineuvottelija", "Sales Specialist"),
+    org: l("Sanoma Media Finland Oy", "Sanoma Media Finland Oy"),
+    periods: ["5/2025 – 7/2025", "12/2025"],
+    meta: l("Osa-aikainen · Vantaa", "Part-time · Vantaa"),
     logo: sanomaLogo.url,
-    description:
-      "Puhelinmyyntiä Sanoman Vantaan toimipisteestä Sanomalasta. Tehtävänä oli tarjota entisille ja nykyisille tilaajille konsernin lehtiä, kuten Helsingin Sanomia, Me Naisia ja Gloriaa.",
+    description: l(
+      "Puhelinmyyntiä Sanoma Media Finlandin myyntitoimistossa Vantaalla. Kartoitin entisten ja nykyisten kuluttaja-asiakkaiden tarpeita ja tarjosin heille sopivia tilausratkaisuja konsernin tunnetuimmista medioista, kuten Helsingin Sanomista, Me Naisista ja Gloriasta. Tavoitteellinen ja tulosperusteinen työ antoi käytännön näkymän mediatalon tilausliiketoimintaan ja asiakkuuksien hoitoon.",
+      "Telephone sales at Sanoma Media Finland’s sales office in Vantaa. I identified the needs of former and current consumer customers and offered suitable subscriptions to the group’s best-known titles, including Helsingin Sanomat, Me Naiset and Gloria. The target-driven, results-based role gave me hands-on insight into a media company’s subscription business and customer relationships.",
+    ),
   },
   {
-    role: "Ravintolatyöntekijä (Crew Member)",
-    org: "McDonald’s",
-    period: "7/2022 – 8/2024",
-    meta: "Kesätyö · pääkaupunkiseutu",
+    role: l("Ravintolatyöntekijä", "Crew Member"),
+    org: l("McDonald’s", "McDonald’s"),
+    periods: ["7/2022 – 8/2024"],
+    meta: l("Kesätyö · kolme kesää", "Summer job · three summers"),
     logo: mcdonaldsLogo.url,
-    description:
-      "Monipuolisia ravintolatehtäviä: asiakaspalvelua, tavaravastaanottoa, kotiinkuljetustilausten kokoamista, siisteydestä huolehtimista sekä ruoanvalmistusta. Työ kehitti paineensietokykyä ja tiimityötaitoja kiireisessä ympäristössä.",
-    sub: [
-      { org: "McDonald’s Pitäjänmäki", period: "5/2024 – 8/2024" },
-      { org: "McDonald’s Teollisuuskatu", period: "7/2023 – 8/2023" },
-      { org: "McDonald’s Suomenoja", period: "7/2022" },
-    ],
-  },
-  {
-    role: "Myymälätyöntekijä",
-    org: "S-market Lähderanta",
-    period: "7/2021",
-    meta: "Tutustu ja tienaa -jakso",
-    logo: sMarketLogo.url,
-    description: "Tuotteiden hyllytystä ja myymälätyötä peruskoulun päättymisen jälkeen.",
-  },
-  {
-    role: "TET-harjoittelija",
-    org: "Prisma Olari",
-    period: "8. luokka",
-    meta: "Kaksi viikkoa",
-    logo: prismaLogo.url,
-    description: "Tavaravastaanottoa ja tuotteiden käsittelyä myymälässä.",
-  },
-  {
-    role: "Taksvärkkipäivä",
-    org: "Prisma Sello",
-    period: "7. luokka",
-    meta: "Yksi päivä",
-    logo: prismaLogo.url,
-    description: "Saapuvien kuormien purkua ja tuotteiden hyllytystä.",
+    description: l(
+      "Kolme kesää pääkaupunkiseudun vilkkaissa ravintoloissa (Suomenoja, Teollisuuskatu ja Pitäjänmäki). Tehtäviin kuuluivat asiakaspalvelu, ruoanvalmistus laatu- ja hygieniastandardien mukaisesti, kotiinkuljetustilausten kokoaminen, tavaravastaanotto ja ravintolan siisteydestä huolehtiminen. Työ vahvisti paineensietokykyä, täsmällisyyttä ja tiimityötaitoja.",
+      "Three summers in busy restaurants in the Helsinki region (Suomenoja, Teollisuuskatu and Pitäjänmäki). Duties included customer service, food preparation to quality and hygiene standards, assembling delivery orders, receiving goods and keeping the restaurant clean. The job strengthened my composure under pressure, precision and teamwork.",
+    ),
   },
 ];
 
-export const education = [
-  { degree: "Medianomi (AMK), journalismi", school: "Haaga-Helia ammattikorkeakoulu", period: "2026 –" },
-  { degree: "Journalismin polkuopinnot", school: "Haaga-Helia, avoin AMK", period: "2025" },
-  { degree: "Ylioppilastutkinto", school: "Espoon yhteislyseon lukio", period: "2021 – 2024" },
+export const education: { degree: L; school: L; period: string }[] = [
+  {
+    degree: l("Medianomi (AMK), journalismi", "Bachelor of Culture and Arts, Journalism"),
+    school: l("Haaga-Helia ammattikorkeakoulu", "Haaga-Helia University of Applied Sciences"),
+    period: "2026 –",
+  },
+  {
+    degree: l("Journalismin polkuopinnot", "Journalism pathway studies"),
+    school: l("Haaga-Helia, avoin AMK", "Haaga-Helia Open UAS"),
+    period: "2025",
+  },
+  {
+    degree: l("Ylioppilastutkinto", "Matriculation examination"),
+    school: l("Espoon yhteislyseon lukio", "Espoon yhteislyseo upper secondary school"),
+    period: "2021 – 2024",
+  },
 ];
 
-export const languages = [
-  { name: "Suomi", level: "Äidinkieli" },
-  { name: "Suomalainen viittomakieli", level: "Äidinkieli" },
-  { name: "Englanti", level: "Hyvä" },
-  { name: "Ruotsi", level: "Perustaso" },
+export const languages: { name: L; level: L }[] = [
+  { name: l("Suomi", "Finnish"), level: l("Äidinkieli", "Native") },
+  { name: l("Suomalainen viittomakieli", "Finnish Sign Language"), level: l("Äidinkieli", "Native") },
+  { name: l("Englanti", "English"), level: l("Hyvä", "Good") },
+  { name: l("Ruotsi", "Swedish"), level: l("Perustaso", "Basic") },
 ];
 
-export const interests = [
-  "Talous",
-  "Kotimainen politiikka ja kuntapolitiikka",
-  "EU ja kansainvälinen politiikka",
-  "Yritys- ja sijoittajaviestintä",
-  "Median murros ja saavutettavuus",
-  "Kuurojen kulttuuri ja historia",
+export const interests: L[] = [
+  l("Talous ja sijoittaminen", "Economics and investing"),
+  l("Yritys- ja sijoittajaviestintä", "Corporate and investor communications"),
+  l("Kotimainen politiikka", "Finnish politics"),
+  l("EU ja kansainvälinen politiikka", "EU and international affairs"),
+  l("Median murros", "The changing media landscape"),
+  l("Kuurojen kulttuuri ja historia", "Deaf culture and history"),
 ];
+
+/** Interface strings. */
+export const ui = {
+  nav: {
+    home: l("Etusivu", "Home"),
+    publications: l("Julkaisut", "Work"),
+    experience: l("Työkokemus", "Experience"),
+    education: l("Koulutus", "Education"),
+    contact: l("Yhteystiedot", "Contact"),
+  },
+  portfolio: l("Portfolio", "Portfolio"),
+  aboutTitle: l("Minusta", "About"),
+  directionTitle: l("Suunta", "Direction"),
+  explore: l("Tutustu", "Explore"),
+  seeWork: l("Katso julkaisut", "View my work"),
+  getInTouch: l("Ota yhteyttä", "Get in touch"),
+  pub: {
+    title: l("Julkaisut", "Published work"),
+    intro: l(
+      "Henkilöjuttuja ja kolumneja Kuurojen Lehdessä sekä artikkeleita ja videojuttuja 360journalismia-mediassa. Uusin ensin.",
+      "Profiles and columns in Kuurojen Lehti, plus articles and video stories for 360journalismia. Newest first.",
+    ),
+    magazine: l("Kuurojen Lehti", "Kuurojen Lehti"),
+    magazineNote: l(
+      "Kuurojen Liiton aikakauslehti, ilmestyy neljästi vuodessa. Jutuista on tässä esillä maistiainen – kokonaisuudessaan ne ovat luettavissa lehdestä.",
+      "The magazine of the Finnish Association of the Deaf, published four times a year. A preview of each story is shown here; the full versions appear in the magazine.",
+    ),
+    other: l("360journalismia · artikkelit ja videot", "360journalismia · articles and video"),
+    read: l("Lue maistiainen", "Read preview"),
+    excerptNote: l("Ote jutusta", "Excerpt (in Finnish)"),
+    fullInMagazine: l("Koko juttu on luettavissa Kuurojen Lehden numerosta", "The full story appears in Kuurojen Lehti issue"),
+    subscribe: l("Tilaa Kuurojen Lehti", "Subscribe to Kuurojen Lehti"),
+    original: l("Alkuperäinen otsikko", "Original title"),
+    openWeb: l("Lue juttu", "Read article"),
+    openIg: l("Katso Instagramissa", "Watch on Instagram"),
+  },
+  exp: {
+    title: l("Työkokemus", "Experience"),
+    intro: l(
+      "Journalismia, myyntiä, asiakaspalvelua ja ohjaustyötä. Uusin ensin.",
+      "Journalism, sales, customer service and youth work. Most recent first.",
+    ),
+    orgs: l("Järjestöt", "Organisations"),
+  },
+  edu: {
+    title: l("Koulutus", "Education"),
+    intro: l("Koulutus, kielitaito ja kiinnostuksen kohteet.", "Education, languages and areas of interest."),
+    education: l("Koulutus", "Education"),
+    languages: l("Kielitaito", "Languages"),
+    interests: l("Kiinnostuksen kohteet", "Interests"),
+  },
+  contact: {
+    title: l("Otetaan yhteyttä", "Let’s talk"),
+    intro: l(
+      "Kiinnostaako yhteistyö, juttuidea tai avoin tehtävä? Tavoitat minut parhaiten sähköpostilla tai LinkedInissä.",
+      "Interested in working together, a story idea or an open position? Email or LinkedIn is the best way to reach me.",
+    ),
+    email: l("Sähköposti", "Email"),
+    location: l("Sijainti", "Location"),
+  },
+};

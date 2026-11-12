@@ -1,10 +1,15 @@
 # Roadmap
-- [ ] Location: "Helsinki" only (no Punavuori)
-- [ ] Crop portrait tighter
-- [ ] Career goal (communications / listed-company comms) more prominent, professional wording everywhere
-- [ ] Rewrite Sanoma description (less corny) + McDonald's description
-- [ ] Kuurojen Lehti: newest first (3/2026 → 4/2025)
-- [ ] Logos: use LinkedIn logos; fix Casino Helsinki corner space
-- [ ] Sanoma dates not crowding the logo (layout spacing)
-- [ ] Decide which work experiences to keep/condense
-- [ ] More premium look
+- [ ] Location "Helsinki" only; remove phone number
+- [ ] Tighter portrait crop
+- [ ] Profile aimed at national media journalism + listed-company comms/finance; elevator-pitch Minusta
+- [ ] Job descriptions rewritten from typical duties (Sanoma, McDonald's, casino, ohjaaja, freelance)
+- [ ] Kuurojen Lehti newest first (3/2026 → 4/2025)
+- [ ] LinkedIn logos; Sanoma dates spacing; camp-leader block layout without empty space
+- [ ] Drop S-market / Prisma entries, condense McDonald's
+- [ ] Remove "two languages" fact/mentions
+- [ ] Reel description reworded; interviewee roles spelled out (no parentheses)
+- [ ] Instagram links fixed (/reel/ URL)
+- [ ] Split into tabs (separate pages)
+- [ ] Finnish + English versions
+- [ ] Dark premium theme
+- [ ] Paywall-friendly sneak peek for Kuurojen Lehti articles; answer copyright question
