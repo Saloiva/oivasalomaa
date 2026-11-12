@@ -250,7 +250,7 @@ export const otherWork: OtherWork[] = [
 
 export type Job = {
   role: L;
-  org: string;
+  org: L;
   /** One line per period, so separate stints never run together. */
   periods: string[];
   meta: L;
@@ -263,7 +263,7 @@ export type Job = {
 export const experience: Job[] = [
   {
     role: l("Pelinhoitaja", "Casino Dealer"),
-    org: "Veikkaus Oy · Casino Helsinki",
+    org: l("Veikkaus Oy · Casino Helsinki", "Veikkaus Oy · Casino Helsinki"),
     periods: ["4/2026 – 8/2026"],
     meta: l("Osa-aikainen · Helsinki", "Part-time · Helsinki"),
     logo: veikkausLogo.url,
@@ -274,7 +274,7 @@ export const experience: Job[] = [
   },
   {
     role: l("Freelance-toimittaja", "Freelance Journalist"),
-    org: "Kuurojen Liitto ry · Kuurojen Lehti",
+    org: l("Kuurojen Liitto ry · Kuurojen Lehti", "Kuurojen Liitto ry · Kuurojen Lehti"),
     periods: ["10/2025 – 8/2026"],
     meta: l("Freelance · etätyö", "Freelance · remote"),
     logo: kuurojenLiittoLogo.url,
@@ -285,7 +285,7 @@ export const experience: Job[] = [
   },
   {
     role: l("Lasten ja nuorten ohjaaja · leiriohjaaja", "Child and Youth Worker · Camp Leader"),
-    org: l("Kuuloalan järjestöt", "Hearing-sector organisations").fi,
+    org: l("Kuuloalan järjestöt", "Hearing-sector organisations"),
     periods: ["7/2022 – 10/2026"],
     meta: l("Osa-aikainen", "Part-time"),
     logo: klvlLogo.url,
@@ -302,7 +302,7 @@ export const experience: Job[] = [
   },
   {
     role: l("Myyntineuvottelija", "Sales Specialist"),
-    org: "Sanoma Media Finland Oy",
+    org: l("Sanoma Media Finland Oy", "Sanoma Media Finland Oy"),
     periods: ["5/2025 – 7/2025", "12/2025"],
     meta: l("Osa-aikainen · Vantaa", "Part-time · Vantaa"),
     logo: sanomaLogo.url,
@@ -313,7 +313,7 @@ export const experience: Job[] = [
   },
   {
     role: l("Ravintolatyöntekijä", "Crew Member"),
-    org: "McDonald’s",
+    org: l("McDonald’s", "McDonald’s"),
     periods: ["7/2022 – 8/2024"],
     meta: l("Kesätyö · kolme kesää", "Summer job · three summers"),
     logo: mcdonaldsLogo.url,
