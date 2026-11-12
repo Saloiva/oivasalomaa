@@ -274,7 +274,7 @@ export const experience: Job[] = [
   },
   {
     role: l("Freelance-toimittaja", "Freelance Journalist"),
-    org: l("Kuurojen Liitto ry · Kuurojen Lehti", "Kuurojen Liitto ry · Kuurojen Lehti"),
+    org: l("Kuurojen Liitto ry · Kuurojen Lehti", "Finnish Association of the Deaf · Kuurojen Lehti"),
     periods: ["10/2025 – 8/2026"],
     meta: l("Freelance · etätyö", "Freelance · remote"),
     logo: kuurojenLiittoLogo.url,
