@@ -31,3 +31,5 @@ use the editor.
 
 ## Project rules
 - All portfolio text and data live in `src/content/portfolio.ts`; components only render it — keeps content edits in one place.
+- Each portfolio section is its own route (`/`, `/julkaisut`, `/tyokokemus`, `/koulutus`, `/yhteystiedot`) sharing the header/footer from `__root.tsx` — tabs are real pages, not hash anchors.
+- Every visible text is an `L` ({fi,en}) rendered via `useLang().t`; Finnish renders on the server and a saved English choice applies after hydration — avoids hydration mismatches.
