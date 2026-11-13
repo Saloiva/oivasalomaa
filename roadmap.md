@@ -1,15 +1,15 @@
 # Roadmap
-- [ ] Location "Helsinki" only; remove phone number
-- [ ] Tighter portrait crop
-- [ ] Profile aimed at national media journalism + listed-company comms/finance; elevator-pitch Minusta
-- [ ] Job descriptions rewritten from typical duties (Sanoma, McDonald's, casino, ohjaaja, freelance)
-- [ ] Kuurojen Lehti newest first (3/2026 → 4/2025)
-- [ ] LinkedIn logos; Sanoma dates spacing; camp-leader block layout without empty space
-- [ ] Drop S-market / Prisma entries, condense McDonald's
-- [ ] Remove "two languages" fact/mentions
-- [ ] Reel description reworded; interviewee roles spelled out (no parentheses)
-- [ ] Instagram links fixed (/reel/ URL)
-- [ ] Split into tabs (separate pages)
-- [ ] Finnish + English versions
-- [ ] Dark premium theme
-- [ ] Paywall-friendly sneak peek for Kuurojen Lehti articles; answer copyright question
+- [x] Location "Helsinki" only; remove phone number
+- [x] Tighter portrait crop
+- [x] Profile aimed at national media journalism + listed-company comms/finance; elevator-pitch Minusta
+- [x] Job descriptions rewritten from typical duties (Sanoma, McDonald's, casino, ohjaaja, freelance)
+- [x] Kuurojen Lehti newest first (3/2026 → 4/2025)
+- [x] LinkedIn logos; Sanoma dates spacing; camp-leader block layout without empty space
+- [x] Drop S-market / Prisma entries, condense McDonald's
+- [x] Remove "two languages" fact/mentions
+- [x] Reel description reworded; interviewee roles spelled out (no parentheses)
+- [x] Instagram links fixed (/reel/ URL)
+- [x] Split into tabs (separate pages)
+- [x] Finnish + English versions
+- [x] Dark premium theme
+- [x] Paywall-friendly sneak peek for Kuurojen Lehti articles; answer copyright question
