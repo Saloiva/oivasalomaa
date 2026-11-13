@@ -10,33 +10,79 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as JulkaisutRouteImport } from './routes/julkaisut'
+import { Route as KoulutusRouteImport } from './routes/koulutus'
+import { Route as TyokokemusRouteImport } from './routes/tyokokemus'
+import { Route as YhteystiedotRouteImport } from './routes/yhteystiedot'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JulkaisutRoute = JulkaisutRouteImport.update({
+  id: '/julkaisut',
+  path: '/julkaisut',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoulutusRoute = KoulutusRouteImport.update({
+  id: '/koulutus',
+  path: '/koulutus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TyokokemusRoute = TyokokemusRouteImport.update({
+  id: '/tyokokemus',
+  path: '/tyokokemus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const YhteystiedotRoute = YhteystiedotRouteImport.update({
+  id: '/yhteystiedot',
+  path: '/yhteystiedot',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/julkaisut': typeof JulkaisutRoute
+  '/koulutus': typeof KoulutusRoute
+  '/tyokokemus': typeof TyokokemusRoute
+  '/yhteystiedot': typeof YhteystiedotRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/julkaisut': typeof JulkaisutRoute
+  '/koulutus': typeof KoulutusRoute
+  '/tyokokemus': typeof TyokokemusRoute
+  '/yhteystiedot': typeof YhteystiedotRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/julkaisut': typeof JulkaisutRoute
+  '/koulutus': typeof KoulutusRoute
+  '/tyokokemus': typeof TyokokemusRoute
+  '/yhteystiedot': typeof YhteystiedotRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/julkaisut' | '/koulutus' | '/tyokokemus' | '/yhteystiedot'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/julkaisut' | '/koulutus' | '/tyokokemus' | '/yhteystiedot'
+  id:
+    | '__root__'
+    | '/'
+    | '/julkaisut'
+    | '/koulutus'
+    | '/tyokokemus'
+    | '/yhteystiedot'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  JulkaisutRoute: typeof JulkaisutRoute
+  KoulutusRoute: typeof KoulutusRoute
+  TyokokemusRoute: typeof TyokokemusRoute
+  YhteystiedotRoute: typeof YhteystiedotRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +94,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/julkaisut': {
+      id: '/julkaisut'
+      path: '/julkaisut'
+      fullPath: '/julkaisut'
+      preLoaderRoute: typeof JulkaisutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/koulutus': {
+      id: '/koulutus'
+      path: '/koulutus'
+      fullPath: '/koulutus'
+      preLoaderRoute: typeof KoulutusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tyokokemus': {
+      id: '/tyokokemus'
+      path: '/tyokokemus'
+      fullPath: '/tyokokemus'
+      preLoaderRoute: typeof TyokokemusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/yhteystiedot': {
+      id: '/yhteystiedot'
+      path: '/yhteystiedot'
+      fullPath: '/yhteystiedot'
+      preLoaderRoute: typeof YhteystiedotRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  JulkaisutRoute: JulkaisutRoute,
+  KoulutusRoute: KoulutusRoute,
+  TyokokemusRoute: TyokokemusRoute,
+  YhteystiedotRoute: YhteystiedotRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
