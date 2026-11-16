@@ -23,8 +23,8 @@ export const profile = {
   name: "Oiva Salomaa",
   title: l("Journalismin opiskelija · Haaga-Helia", "Journalism student · Haaga-Helia"),
   tagline: l(
-    "Journalismin opiskelija ja freelance-toimittaja. Kirjoitan ihmisistä, kulttuurista ja yhteiskunnasta.",
-    "Journalism student and freelance writer covering people, culture and society.",
+    "Olen toimittaja ja viestijä, joka tekee huolellisesti taustoitettua journalismia ihmisistä, kulttuurista ja yhteiskunnasta.",
+    "I am a journalist and communicator who produces well-researched journalism about people, culture and society.",
   ),
   email: "oiva.salomaa@gmail.com",
   location: l("Helsinki", "Helsinki, Finland"),
@@ -35,16 +35,16 @@ export const profile = {
 /** Elevator pitch shown on the home page. */
 export const about: L[] = [
   l(
-    "Olen helsinkiläinen journalismin opiskelija ja freelance-toimittaja. Opiskelen medianomiksi Haaga-Helia ammattikorkeakoulussa ja kirjoitan henkilöjuttuja ja kolumneja Kuurojen Lehteen. 360journalismia-mediaan olen tuottanut artikkeleita ja videojuttuja urheilusta, kulttuurista ja liikunnasta.",
-    "I am a Helsinki-based journalism student and freelance journalist. I am studying for a Bachelor of Culture and Arts (journalism) at Haaga-Helia University of Applied Sciences and write profiles and columns for Kuurojen Lehti, the magazine of the Finnish Association of the Deaf. For the 360journalismia newsroom I have produced articles and video stories on sport, culture and fitness.",
+    "Olen helsinkiläinen journalismin opiskelija ja freelance-toimittaja. Opiskelen medianomiksi Haaga-Helia ammattikorkeakoulussa. Kuurojen Lehteen olen kirjoittanut henkilöjuttuja ja kolumneja yksittäisinä toimeksiantoina. 360journalismia-mediaan olen tuottanut artikkeleita ja videojuttuja urheilusta, kulttuurista ja liikunnasta.",
+    "I am a Helsinki-based journalism student and freelance journalist. I am studying for a Bachelor of Culture and Arts (journalism) at Haaga-Helia University of Applied Sciences I have written profiles and columns on commission for Kuurojen Lehti, the magazine of the Finnish Association of the Deaf. For the 360journalismia newsroom I have produced articles and video stories on sport, culture and fitness.",
   ),
   l(
     "Työssäni korostuvat huolellinen tiedonhankinta, selkeä ilmaisu ja kyky kohdata hyvin erilaisia ihmisiä. Työkokemus Sanoma Media Finlandin myynnissä, Veikkauksen Casino Helsingissä ja kuuloalan järjestöjen ohjaajana on opettanut tarkkuutta, vastuullisuutta ja luotettavuutta tehtävissä, joissa virheisiin ei ole varaa.",
     "My work is built on thorough research, clear expression and the ability to connect with very different people. Experience in sales at Sanoma Media Finland, at Veikkaus’s Casino Helsinki and as a youth leader for hearing-impaired children has taught me accuracy, responsibility and reliability in roles where there is no room for error.",
   ),
   l(
-    "Seuraan uutisia ja yhteiskunnallista keskustelua laajasti, kotimaan asioista kansainväliseen politiikkaan. Tavoitteeni on toimittajan työ valtakunnallisessa mediassa tai yritysviestinnän tehtävät, esimerkiksi pörssiyhtiössä.",
-    "I follow the news and public debate closely, from Finnish affairs to international politics. My aim is to work as a reporter for a national news outlet or in corporate communications, for example at a listed company.",
+    "Seuraan uutisia ja yhteiskunnallista keskustelua laajasti, kotimaan asioista kansainväliseen politiikkaan. Tavoitteeni on toimittajan työ valtakunnallisessa mediassa tai tehtävä yritysviestinnässä.",
+    "I follow the news and public debate closely, from Finnish affairs to international politics. My aim is to work as a reporter for a national news outlet or in corporate communications.",
   ),
 ];
 
@@ -52,22 +52,22 @@ export const direction: { title: L; text: L }[] = [
   {
     title: l("Journalismi", "Journalism"),
     text: l(
-      "Toimittajan tehtävät valtakunnallisessa mediassa: taustoittavat jutut, henkilöjutut ja ajankohtaisaiheet.",
-      "Reporting for national media: in-depth features, profiles and current affairs.",
+      "Haluan työskennellä toimittajana valtakunnallisessa mediassa. Minua kiinnostavat erityisesti taustoittavat jutut, henkilöjutut ja ajankohtaiset aiheet.",
+      "I want to work as a reporter for national media. I am particularly interested in in-depth features, profiles and current affairs.",
     ),
   },
   {
     title: l("Viestintä", "Communications"),
     text: l(
-      "Yritys- ja sijoittajaviestintä, erityisesti pörssiyhtiöiden viestintätehtävät.",
-      "Corporate and investor communications, particularly at listed companies.",
+      "Minua kiinnostavat yritysviestinnän tehtävät, joissa asiat täytyy kertoa selkeästi, oikein ja ajallaan.",
+      "I am interested in corporate communications, where information has to be shared clearly, accurately and on time.",
     ),
   },
   {
     title: l("Talous", "Finance"),
     text: l(
-      "Kiinnostus talouteen, sijoittamiseen ja markkinoiden ilmiöiden selittämiseen ymmärrettävästi.",
-      "A strong interest in economics, investing and explaining market developments clearly.",
+      "Seuraan talouden ja yhteiskunnan kehitystä. Haluan kertoa monimutkaisista asioista niin, että ne ovat helppo ymmärtää.",
+      "I follow economic and social developments. I want to explain complex issues in a way that is easy to understand.",
     ),
   },
 ];
@@ -103,7 +103,7 @@ export const articles: Article[] = [
     credits: l("Teksti Oiva Salomaa · Kuvat Päivi ja Petri Mäntylä", "Text Oiva Salomaa · Photos Päivi and Petri Mäntylä"),
     lead: l(
       "Jyväskyläläisten Päivi ja Petri Mäntylän matkasuunnitelmat saavat nykyään usein suuntansa kirkoista. Sattumalta alkanut harrastus on vienyt pariskunnan jo 247 suomalaiselle kirkolle ja samalla tutustuttanut heidät paikkoihin, joihin ei muuten ehkä olisi tullut lähdettyä.",
-      "For Päivi and Petri Mäntylä from Jyväskylä, churches now often set the direction of their travels. A hobby that began by chance has taken the couple to 247 Finnish churches – and to places they might otherwise never have visited.",
+      "For Päivi and Petri Mäntylä from Jyväskylä, churches now often set the direction of their travels. A hobby that began by chance has taken the couple to 247 Finnish churches and to places they might otherwise never have visited.",
     ),
     image: kirkkoImg.url,
     imageAlt: "Lehtiaukeama: Suomea kirkko kerrallaan",
@@ -133,8 +133,8 @@ export const articles: Article[] = [
     pages: "s. 15",
     credits: l("Teksti ja kuva Oiva Salomaa", "Text and photo Oiva Salomaa"),
     lead: l(
-      "Kansallista viittomakielten päivää vietettiin 12. helmikuuta, kun Suomen ensimmäisen kuurojenkoulun perustajan Carl Oscar Malmin syntymästä tuli kuluneeksi 200 vuotta. Kolumni hänen perinnöstään ja siitä, miksi saavutetuista oikeuksista on pidettävä kiinni.",
-      "Finland’s National Sign Language Day on 12 February marked 200 years since the birth of Carl Oscar Malm, founder of the country’s first school for the deaf. A column on his legacy and why hard-won rights must be defended.",
+      "Kansallista viittomakielten päivää vietettiin 12. helmikuuta, kun Suomen ensimmäisen kuurojenkoulun perustajan Carl Oscar Malmin syntymästä tuli kuluneeksi 200 vuotta. Kolumnissa pohdin hänen perintöään ja sitä, miksi saavutetuista oikeuksista on pidettävä kiinni.",
+      "Finland’s National Sign Language Day on 12 February marked 200 years since the birth of Carl Oscar Malm, founder of the country’s first school for the deaf. In this column I reflect on his legacy and why hard-won rights must be defended.",
     ),
     image: malmiImg.url,
     imageAlt: "Lehtisivu: Nuorisopalsta – Malmin perintö tuli jäädäkseen",
@@ -153,8 +153,8 @@ export const articles: Article[] = [
     pages: "s. 25",
     credits: l("Teksti ja kuva Oiva Salomaa", "Text and photo Oiva Salomaa"),
     lead: l(
-      "Kolumni mediakentän murroksesta: algoritmit, kiire ja siirtymä video- ja äänisisältöihin muuttavat uutisten kulutusta. Mitä muutos merkitsee viittomakieliselle medialle ja sen yleisölle?",
-      "A column on the changing media landscape: algorithms, speed and the shift to video and audio are transforming how news is consumed. What does this mean for sign-language media and its audience?",
+      "Kolumni käsittelee mediakentän murrosta. Algoritmit, kiire ja siirtymä video- ja äänisisältöihin muuttavat uutisten kulutusta. Mitä muutos merkitsee viittomakieliselle medialle ja sen yleisölle?",
+      "This column looks at the changing media landscape. Algorithms, speed and the shift to video and audio are transforming how news is consumed. What does this mean for sign-language media and its audience?",
     ),
     image: mediaImg.url,
     imageAlt: "Lehtisivu: Nuorisopalsta – Media murroksessa",
@@ -186,8 +186,8 @@ export const otherWork: OtherWork[] = [
       "Reporting Oiva Salomaa · Camera Oiva Salomaa, Sanna Niemi and Aapo Kämäräinen",
     ),
     description: l(
-      "Videojuttu toukokuussa 2026 perustetusta pyöräily-yhteisöstä, joka kasvoi muutamassa kuukaudessa yli tuhannen jäsenen yhteisöksi. Haastateltavina yhteisön perustaja Hanna Solomon sekä lenkkien vetäjät.",
-      "A video story on a women’s cycling community founded in May 2026 that grew to over a thousand members within months. Featuring founder Hanna Solomon and the ride leaders.",
+      "Videojuttu kertoo toukokuussa 2026 perustetusta pyöräily-yhteisöstä, joka kasvoi muutamassa kuukaudessa yli tuhannen jäsenen yhteisöksi. Haastattelin yhteisön perustajaa Hanna Solomonia sekä lenkkien vetäjiä.",
+      "This video story is about a women’s cycling community founded in May 2026 that grew to over a thousand members within months. I interviewed founder Hanna Solomon and the ride leaders.",
     ),
     url: "https://www.360journalismia.fi/muijat-rullaa-saa-naiset-liikkeelle/",
     platform: "web",
@@ -198,8 +198,8 @@ export const otherWork: OtherWork[] = [
     date: "17.3.2026",
     credits: l("Oiva Salomaa", "Oiva Salomaa"),
     description: l(
-      "Susijengi-artikkelia täydentävä lyhytvideo: miksi maajoukkueen yleisöhuuma ei siirry Korisliigan otteluihin? Julkaistu 360° Median Instagram-tilillä.",
-      "A short video accompanying the Susijengi article: why doesn’t the national team’s crowd appeal carry over to the domestic league? Published on 360° Media’s Instagram.",
+      "Lyhytvideo täydentää Susijengi-artikkelia. Se kysyy, miksi maajoukkueen yleisöhuuma ei siirry Korisliigan otteluihin. Video julkaistiin 360° Median Instagram-tilillä.",
+      "This short video accompanies the Susijengi article. It asks why the national team’s crowd appeal does not carry over to the domestic league. It was published on 360° Media’s Instagram.",
     ),
     url: "https://www.instagram.com/reel/DV9nuHfgkTn/",
     platform: "instagram",
@@ -210,8 +210,8 @@ export const otherWork: OtherWork[] = [
     date: "16.3.2026",
     credits: l("Teksti ja kuvat Oiva Salomaa", "Text and photos Oiva Salomaa"),
     description: l(
-      "Susijengi täyttää hallit, mutta ilmiö näkyy Korisliigan yleisömäärissä vain osittain. Haastateltavina Loimaa Bisonsin hallituksen jäsen Heikki Perho, Helsinki Seagullsin viestintäpäällikkö Mikko-Taneli Mäki ja Suomen Koripalloliiton viestintä- ja markkinointipäällikkö Heini Santos.",
-      "Finland’s national basketball team fills arenas, but the effect shows only partly in domestic league attendance. Interviewees: Loimaa Bisons board member Heikki Perho, Helsinki Seagulls head of communications Mikko-Taneli Mäki and Finnish Basketball Association communications and marketing manager Heini Santos.",
+      "Susijengi täyttää hallit, mutta ilmiö näkyy Korisliigan yleisömäärissä vain osittain. Haastattelin Loimaa Bisonsin hallituksen jäsentä Heikki Perhoa, Helsinki Seagullsin viestintäpäällikköä Mikko-Taneli Mäkeä ja Suomen Koripalloliiton viestintä- ja markkinointipäällikköä Heini Santosta.",
+      "Finland’s national basketball team fills arenas, but the effect shows only partly in domestic league attendance. I interviewed Loimaa Bisons board member Heikki Perho, Helsinki Seagulls head of communications Mikko-Taneli Mäki and Finnish Basketball Association communications and marketing manager Heini Santos.",
     ),
     url: "https://www.360journalismia.fi/susijengi-huuma-ei-tayta-korisliigan-katsomoita/",
     platform: "web",
@@ -222,8 +222,8 @@ export const otherWork: OtherWork[] = [
     date: "27.2.2026",
     credits: l("Teksti ja kuva Oiva Salomaa", "Text and photo Oiva Salomaa"),
     description: l(
-      "Kansallisteatterin Kolme harjoitelmaa sodan ja rakkauden vuosilta käsittelee Israelin ja Palestiinan konfliktia kolmen suomalaisen naisen näkökulmasta. Haastateltavina teatterintutkija Hanna Korsberg sekä näytelmän kirjoittaja ja ohjaaja Michael Baran.",
-      "The Finnish National Theatre’s play examines the Israeli–Palestinian conflict through the eyes of three Finnish women. Interviewees: theatre scholar Hanna Korsberg and the play’s writer and director Michael Baran.",
+      "Kansallisteatterin Kolme harjoitelmaa sodan ja rakkauden vuosilta käsittelee Israelin ja Palestiinan konfliktia kolmen suomalaisen naisen näkökulmasta. Haastattelin teatterintutkija Hanna Korsbergia sekä näytelmän kirjoittajaa ja ohjaajaa Michael Barania.",
+      "The Finnish National Theatre’s play examines the Israeli–Palestinian conflict through the eyes of three Finnish women. I interviewed theatre scholar Hanna Korsberg and the play’s writer and director Michael Baran.",
     ),
     url: "https://www.360journalismia.fi/teatteri-jattaa-tilaa-tulkinnalle/",
     platform: "web",
@@ -234,8 +234,8 @@ export const otherWork: OtherWork[] = [
     date: "27.2.2026",
     credits: l("Oiva Salomaa", "Oiva Salomaa"),
     description: l(
-      "Katugallup Kampissa: ohikulkijat kertovat teatterissa käynneistään, lippujen hinnoista ja toivomistaan aiheista. Taustalla TINFOn tilastot katsojamäärien kehityksestä.",
-      "A vox pop in Kamppi, Helsinki: passers-by on how often they go to the theatre, ticket prices and the themes they want to see – set against TINFO audience statistics.",
+      "Katugallupissa Kampin ohikulkijat kertovat teatterissa käynneistään, lippujen hinnoista ja toivomistaan aiheista. Taustalla ovat TINFOn tilastot katsojamäärien kehityksestä.",
+      "In this vox pop, passers-by in Kamppi, Helsinki talk about how often they go to the theatre, ticket prices and the themes they want to see. The video draws on TINFO audience statistics.",
     ),
     url: "https://www.instagram.com/p/DVQiti-jeSd/",
     platform: "instagram",
@@ -262,8 +262,8 @@ export const experience: Job[] = [
     meta: l("Osa-aikainen · Helsinki", "Part-time · Helsinki"),
     logo: veikkausLogo.url,
     description: l(
-      "Ruletin pelinhoitoa Suomen ainoalla kasinolla, pääosin ilta- ja yövuoroissa. Tehtäviin kuuluivat pelin johtaminen sääntöjen mukaisesti, panosten ja voittojen tarkka käsittely, vastuullisen pelaamisen periaatteiden noudattaminen sekä asiakaspalvelu kansainväliselle asiakaskunnalle, pääosin englanniksi. Tehtävään valitaan taustatarkistuksen kautta, ja se edellyttää tarkkuutta, keskittymiskykyä ja paineensietoa.",
-      "Dealing roulette at Finland’s only casino, mainly on evening and night shifts. Responsibilities included running the game by the rules, handling stakes and payouts accurately, applying responsible-gambling principles and serving an international clientele, mostly in English. The role requires a background check and calls for precision, concentration and composure under pressure.",
+      "Hoidin ruletti-pelejä Suomen ainoalla kasinolla, pääosin ilta- ja yövuoroissa. Tehtäviin kuuluivat pelin johtaminen sääntöjen mukaisesti, panosten ja voittojen tarkka käsittely, vastuullisen pelaamisen periaatteiden noudattaminen sekä asiakaspalvelu kansainväliselle asiakaskunnalle, pääosin englanniksi. Tehtävään valitaan taustatarkistuksen kautta, ja se edellyttää tarkkuutta, keskittymiskykyä ja paineensietoa.",
+      "I dealt roulette at Finland’s only casino, mainly on evening and night shifts. Responsibilities included running the game by the rules, handling stakes and payouts accurately, applying responsible-gambling principles and serving an international clientele, mostly in English. The role requires a background check and calls for precision, concentration and composure under pressure.",
     ),
   },
   {
@@ -273,8 +273,8 @@ export const experience: Job[] = [
     meta: l("Freelance · etätyö", "Freelance · remote"),
     logo: kuurojenLiittoLogo.url,
     description: l(
-      "Henkilöjuttuja ja Nuorisopalsta-kolumneja neljästi vuodessa ilmestyvään aikakauslehteen. Työhön kuuluvat aiheiden ideointi, haastattelut, kirjoittaminen ja kuvaaminen sekä yhteistyö toimituksen kanssa editoinnissa ja aikatauluissa. Juttuja on julkaistu numeroissa 4/2025–3/2026.",
-      "Profiles and youth columns for a magazine published four times a year. The work covers story ideas, interviews, writing and photography, as well as working with the editors on edits and deadlines. Stories published in issues 4/2025–3/2026.",
+      "Kirjoitan henkilöjuttuja ja Nuorisopalsta-kolumneja neljästi vuodessa ilmestyvään aikakauslehteen yksittäisinä toimeksiantoina. Työhön kuuluvat aiheiden ideointi, haastattelut, kirjoittaminen ja kuvaaminen sekä yhteistyö toimituksen kanssa editoinnissa ja aikatauluissa. Juttujani on julkaistu numeroissa 4/2025, 1/2026, 2/2026 ja 3/2026.",
+      "I write profiles and youth columns on commission for a magazine published four times a year. The work covers story ideas, interviews, writing and photography, as well as working with the editors on edits and deadlines. My stories have appeared in issues 4/2025, 1/2026, 2/2026 and 3/2026.",
     ),
   },
   {
@@ -284,8 +284,8 @@ export const experience: Job[] = [
     meta: l("Osa-aikainen", "Part-time"),
     logo: klvlLogo.url,
     description: l(
-      "Leirien, vertaistukitapahtumien ja vapaa-ajan toiminnan ohjaamista kuulovammaisille lapsille ja nuorille. Tehtäviin kuuluvat ohjelman suunnittelu ja toteutus, ryhmänhallinta sekä osallistujien turvallisuudesta ja hyvinvoinnista huolehtiminen. Neljä järjestöä on luottanut minuun toistuvasti useiden vuosien ajan.",
-      "Leading camps, peer-support events and leisure activities for hearing-impaired children and young people. Responsibilities include planning and running programmes, group management and looking after participants’ safety and wellbeing. Four organisations have repeatedly entrusted me with this work over several years.",
+      "Ohjaan leirejä, vertaistukitapahtumia ja vapaa-ajan toimintaa kuulovammaisille lapsille ja nuorille. Tehtäviin kuuluvat ohjelman suunnittelu ja toteutus, ryhmänhallinta sekä osallistujien turvallisuudesta ja hyvinvoinnista huolehtiminen. Neljä järjestöä on luottanut minuun toistuvasti useiden vuosien ajan.",
+      "I lead camps, peer-support events and leisure activities for hearing-impaired children and young people. Responsibilities include planning and running programmes, group management and looking after participants’ safety and wellbeing. Four organisations have repeatedly entrusted me with this work over several years.",
     ),
     sub: [
       { org: "Kuulovammaisten Lasten Vanhempien Liitto ry", period: "1/2025 – 10/2026", logo: klvlLogo.url },
@@ -301,8 +301,8 @@ export const experience: Job[] = [
     meta: l("Osa-aikainen · Vantaa", "Part-time · Vantaa"),
     logo: sanomaLogo.url,
     description: l(
-      "Puhelinmyyntiä Sanoma Media Finlandin myyntitoimistossa Vantaalla. Kartoitin entisten ja nykyisten kuluttaja-asiakkaiden tarpeita ja tarjosin heille sopivia tilausratkaisuja konsernin tunnetuimmista medioista, kuten Helsingin Sanomista, Me Naisista ja Gloriasta. Tavoitteellinen ja tulosperusteinen työ antoi käytännön näkymän mediatalon tilausliiketoimintaan ja asiakkuuksien hoitoon.",
-      "Telephone sales at Sanoma Media Finland’s sales office in Vantaa. I identified the needs of former and current consumer customers and offered suitable subscriptions to the group’s best-known titles, including Helsingin Sanomat, Me Naiset and Gloria. The target-driven, results-based role gave me hands-on insight into a media company’s subscription business and customer relationships.",
+      "Tein puhelinmyyntiä Sanoma Media Finlandin myyntitoimistossa Vantaalla. Kartoitin entisten ja nykyisten kuluttaja-asiakkaiden tarpeita ja tarjosin heille sopivia tilausratkaisuja konsernin tunnetuimmista medioista, kuten Helsingin Sanomista, Me Naisista ja Gloriasta. Tavoitteellinen ja tulosperusteinen työ antoi käytännön näkymän mediatalon tilausliiketoimintaan ja asiakkuuksien hoitoon.",
+      "I worked in telephone sales at Sanoma Media Finland’s sales office in Vantaa. I identified the needs of former and current consumer customers and offered suitable subscriptions to the group’s best-known titles, including Helsingin Sanomat, Me Naiset and Gloria. The target-driven, results-based role gave me hands-on insight into a media company’s subscription business and customer relationships.",
     ),
   },
   {
@@ -312,8 +312,8 @@ export const experience: Job[] = [
     meta: l("Kesätyö · kolme kesää", "Summer job · three summers"),
     logo: mcdonaldsLogo.url,
     description: l(
-      "Kolme kesää pääkaupunkiseudun vilkkaissa ravintoloissa (Suomenoja, Teollisuuskatu ja Pitäjänmäki). Tehtäviin kuuluivat asiakaspalvelu, ruoanvalmistus laatu- ja hygieniastandardien mukaisesti, kotiinkuljetustilausten kokoaminen, tavaravastaanotto ja ravintolan siisteydestä huolehtiminen. Työ vahvisti paineensietokykyä, täsmällisyyttä ja tiimityötaitoja.",
-      "Three summers in busy restaurants in the Helsinki region (Suomenoja, Teollisuuskatu and Pitäjänmäki). Duties included customer service, food preparation to quality and hygiene standards, assembling delivery orders, receiving goods and keeping the restaurant clean. The job strengthened my composure under pressure, precision and teamwork.",
+      "Työskentelin kolmena kesänä pääkaupunkiseudun vilkkaissa ravintoloissa Suomenojalla, Teollisuuskadulla ja Pitäjänmäessä. Tehtäviin kuuluivat asiakaspalvelu, ruoanvalmistus laatu- ja hygieniastandardien mukaisesti, kotiinkuljetustilausten kokoaminen, tavaravastaanotto ja ravintolan siisteydestä huolehtiminen. Työ vahvisti paineensietokykyä, täsmällisyyttä ja tiimityötaitoja.",
+      "I spent three summers working in busy restaurants in the Helsinki region, in Suomenoja, Teollisuuskatu and Pitäjänmäki. Duties included customer service, food preparation to quality and hygiene standards, assembling delivery orders, receiving goods and keeping the restaurant clean. The job strengthened my composure under pressure, precision and teamwork.",
     ),
   },
 ];
@@ -345,11 +345,9 @@ export const languages: { name: L; level: L }[] = [
 
 export const interests: L[] = [
   l("Talous ja sijoittaminen", "Economics and investing"),
-  l("Yritys- ja sijoittajaviestintä", "Corporate and investor communications"),
   l("Kotimainen politiikka", "Finnish politics"),
   l("EU ja kansainvälinen politiikka", "EU and international affairs"),
   l("Median murros", "The changing media landscape"),
-  l("Kuurojen kulttuuri ja historia", "Deaf culture and history"),
   l("Suomen kulttuuri ja historia", "Finnish culture and history"),
 ];
 
@@ -371,14 +369,14 @@ export const ui = {
   pub: {
     title: l("Julkaisut", "Published work"),
     intro: l(
-      "Henkilöjuttuja ja kolumneja Kuurojen Lehdessä sekä artikkeleita ja videojuttuja 360journalismia-mediassa.",
-      "Profiles and columns in Kuurojen Lehti, plus articles and video stories for 360journalismia.",
+      "Täältä löydät henkilöjuttuni ja kolumnini Kuurojen Lehdessä sekä artikkelini ja videojuttuni 360journalismia-mediassa.",
+      "Here you will find my profiles and columns in Kuurojen Lehti, as well as my articles and video stories for 360journalismia.",
     ),
     magazine: l("Kuurojen Lehti", "Kuurojen Lehti"),
-    preview: l("Esikatselu · koko juttu painetussa lehdessä", "Preview · full story in the print magazine"),
+    preview: l("Esikatselu. Koko juttu on luettavissa painetusta lehdestä.", "Preview. The full story is in the print magazine."),
     magazineNote: l(
-      "Kuurojen Liiton aikakauslehti, ilmestyy neljästi vuodessa. Jutuista on tässä esillä maistiainen – kokonaisuudessaan ne ovat luettavissa lehdestä.",
-      "The magazine of the Finnish Association of the Deaf, published four times a year. A preview of each story is shown here; the full versions appear in the magazine.",
+      "Kuurojen Lehti on Kuurojen Liiton aikakauslehti, joka ilmestyy neljästi vuodessa. Jutuista on tässä esillä maistiainen, ja kokonaisuudessaan ne ovat luettavissa painetusta lehdestä.",
+      "Kuurojen Lehti is the magazine of the Finnish Association of the Deaf, published four times a year. A preview of each story is shown here; the full versions appear in the magazine.",
     ),
     other: l("360journalismia · artikkelit ja videot", "360journalismia · articles and video"),
     read: l("Lue maistiainen", "Read preview"),
@@ -392,14 +390,14 @@ export const ui = {
   exp: {
     title: l("Työkokemus", "Experience"),
     intro: l(
-      "Journalismia, myyntiä, asiakaspalvelua ja ohjaustyötä.",
-      "Journalism, sales, customer service and youth work.",
+      "Kokemukseni kattaa journalismia, myyntiä, asiakaspalvelua ja ohjaustyötä.",
+      "My experience covers journalism, sales, customer service and youth work.",
     ),
     orgs: l("Järjestöt", "Organisations"),
   },
   edu: {
     title: l("Koulutus", "Education"),
-    intro: l("Koulutus, kielitaito ja kiinnostuksen kohteet.", "Education, languages and areas of interest."),
+    intro: l("Tällä sivulla kerron koulutuksestani, kielitaidostani ja kiinnostuksen kohteistani.", "This page covers my education, languages and areas of interest."),
     education: l("Koulutus", "Education"),
     languages: l("Kielitaito", "Languages"),
     interests: l("Kiinnostuksen kohteet", "Interests"),
