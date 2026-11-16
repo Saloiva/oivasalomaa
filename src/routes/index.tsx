@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "@/components/portfolio/SectionHeading";
-import { about, direction, keyFacts, portrait, profile, ui } from "@/content/portfolio";
+import { about, direction, portrait, profile, ui } from "@/content/portfolio";
 import { useLang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
@@ -36,7 +36,7 @@ function Home() {
   return (
     <>
       <section className="glow">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-16 pt-12 sm:px-8 md:pt-20 lg:grid-cols-[1.3fr_1fr]">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-12 sm:px-8 md:pt-20 lg:grid-cols-[1.3fr_1fr]">
           <div className="animate-rise">
             <p className="eyebrow text-highlight">{t(profile.title)}</p>
             <h1 className="headline mt-5 text-[clamp(4rem,11vw,9rem)]">
@@ -67,14 +67,6 @@ function Home() {
           </figure>
         </div>
 
-        <dl className="mx-auto grid max-w-6xl grid-cols-1 border-y border-border sm:grid-cols-3">
-          {keyFacts.map((f, i) => (
-            <div key={f.value + i} className={`px-5 py-7 sm:px-8 ${i > 0 ? "border-t border-border sm:border-l sm:border-t-0" : ""}`}>
-              <dt className="headline text-5xl text-highlight">{f.value}</dt>
-              <dd className="mt-2 text-base text-muted-foreground">{t(f.label)}</dd>
-            </div>
-          ))}
-        </dl>
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8">

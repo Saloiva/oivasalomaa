@@ -391,8 +391,8 @@ export const ui = {
   exp: {
     title: l("Työkokemus", "Experience"),
     intro: l(
-      "Journalismia, myyntiä, asiakaspalvelua ja ohjaustyötä. Uusin ensin.",
-      "Journalism, sales, customer service and youth work. Most recent first.",
+      "Journalismia, myyntiä, asiakaspalvelua ja ohjaustyötä.",
+      "Journalism, sales, customer service and youth work.",
     ),
     orgs: l("Järjestöt", "Organisations"),
   },
