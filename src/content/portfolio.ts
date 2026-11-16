@@ -375,6 +375,7 @@ export const ui = {
       "Profiles and columns in Kuurojen Lehti, plus articles and video stories for 360journalismia.",
     ),
     magazine: l("Kuurojen Lehti", "Kuurojen Lehti"),
+    preview: l("Esikatselu · koko juttu painetussa lehdessä", "Preview · full story in the print magazine"),
     magazineNote: l(
       "Kuurojen Liiton aikakauslehti, ilmestyy neljästi vuodessa. Jutuista on tässä esillä maistiainen – kokonaisuudessaan ne ovat luettavissa lehdestä.",
       "The magazine of the Finnish Association of the Deaf, published four times a year. A preview of each story is shown here; the full versions appear in the magazine.",

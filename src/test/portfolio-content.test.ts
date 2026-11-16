@@ -16,3 +16,9 @@ describe("portfolio content rules", () => {
     expect(leader?.sub?.some((s) => /kuurojen liitto/i.test(s.org))).toBe(false);
   });
 });
+
+describe("paywall", () => {
+  it("shows only blurred preview scans of Kuurojen Lehti pages", () => {
+    for (const a of articles) expect(a.image).toMatch(/_esikatselu\.jpg$/);
+  });
+});
