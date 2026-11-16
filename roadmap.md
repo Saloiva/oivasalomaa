@@ -14,3 +14,5 @@
 - [x] Dark premium theme
 - [x] Paywall-friendly sneak peek for Kuurojen Lehti articles; answer copyright question
 - [x] Blur story text in magazine scans; contact cards stack cleanly; less corny tagline/About; drop key-facts strip; no "newest first" in intros; add Finnish culture & history interest
+- [ ] Remove deaf culture + corporate/investor comms from interests; intro text; Viestintä less investor-ish, no pörssiyhtiö; no dashes; full sentences; Kuurojen Lehti on commission only
+- [ ] Add Nostalgiaradio (360journalismia) piece
