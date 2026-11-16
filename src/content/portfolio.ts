@@ -384,8 +384,8 @@ export const ui = {
   pub: {
     title: l("Julkaisut", "Published work"),
     intro: l(
-      "Täältä löydät henkilöjuttuni ja kolumnini Kuurojen Lehdessä sekä artikkelini ja videojuttuni 360journalismia-mediassa.",
-      "Here you will find my profiles and columns in Kuurojen Lehti, as well as my articles and video stories for 360journalismia.",
+      "Täältä löydät henkilöjuttuni ja kolumnini Kuurojen Lehdessä sekä artikkelini, videojuttuni ja radiotyöni 360journalismia-mediassa.",
+      "Here you will find my profiles and columns in Kuurojen Lehti, as well as my articles, video stories and radio work for 360journalismia.",
     ),
     magazine: l("Kuurojen Lehti", "Kuurojen Lehti"),
     preview: l("Esikatselu. Koko juttu on luettavissa painetusta lehdestä.", "Preview. The full story is in the print magazine."),
@@ -393,7 +393,7 @@ export const ui = {
       "Kuurojen Lehti on Kuurojen Liiton aikakauslehti, joka ilmestyy neljästi vuodessa. Jutuista on tässä esillä maistiainen, ja kokonaisuudessaan ne ovat luettavissa painetusta lehdestä.",
       "Kuurojen Lehti is the magazine of the Finnish Association of the Deaf, published four times a year. A preview of each story is shown here; the full versions appear in the magazine.",
     ),
-    other: l("360journalismia · artikkelit ja videot", "360journalismia · articles and video"),
+    other: l("360journalismia · artikkelit, videot ja radio", "360journalismia · articles, video and radio"),
     read: l("Lue maistiainen", "Read preview"),
     excerptNote: l("Ote jutusta", "Excerpt (in Finnish)"),
     fullInMagazine: l("Koko juttu on luettavissa Kuurojen Lehden numerosta", "The full story appears in Kuurojen Lehti issue"),
