@@ -52,8 +52,11 @@ export function ArticleCard({ article, featured = false }: { article: Article; f
         <div className="grid gap-0 md:grid-cols-[1fr_1.1fr]">
           <div className="self-stretch border-b border-border bg-muted md:border-b-0 md:border-r">
             {/* Preview only: the top of the page, faded out */}
-            <div className="max-h-[60vh] overflow-hidden md:sticky md:top-0">
+            <div className="relative max-h-[60vh] overflow-hidden md:sticky md:top-0">
               <img src={article.image} alt={article.imageAlt} className="fade-bottom w-full object-cover object-top" />
+              <span className="eyebrow absolute bottom-3 left-3 right-3 rounded-sm bg-background/85 px-2 py-1 text-muted-foreground backdrop-blur">
+                {t(ui.pub.preview)}
+              </span>
             </div>
           </div>
           <div className="p-6 sm:p-10">

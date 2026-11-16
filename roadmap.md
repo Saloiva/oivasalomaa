@@ -13,3 +13,4 @@
 - [x] Finnish + English versions
 - [x] Dark premium theme
 - [x] Paywall-friendly sneak peek for Kuurojen Lehti articles; answer copyright question
+- [x] Blur story text in magazine scans; contact cards stack cleanly; less corny tagline/About; drop key-facts strip; no "newest first" in intros; add Finnish culture & history interest

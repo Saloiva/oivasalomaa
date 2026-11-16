@@ -36,19 +36,19 @@ function Contact() {
             {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
             className="group rounded-md border border-border bg-card p-6 transition-colors hover:border-highlight sm:p-8"
           >
-            <p className="eyebrow inline-flex items-center gap-2 text-muted-foreground">
+            <p className="eyebrow flex items-center gap-2 text-muted-foreground">
               <Icon className="h-4 w-4" /> {label}
             </p>
-            <p className="mt-4 inline-flex items-center gap-2 break-all text-2xl transition-colors group-hover:text-highlight sm:text-3xl">
-              {value} <ArrowUpRight className="h-5 w-5 shrink-0" />
+            <p className="mt-4 flex items-center gap-2 text-2xl transition-colors group-hover:text-highlight lg:text-3xl">
+              <span className="min-w-0 [overflow-wrap:anywhere]">{value}</span> <ArrowUpRight className="h-5 w-5 shrink-0" />
             </p>
           </a>
         ))}
         <div className="rounded-md border border-border bg-card p-6 sm:p-8">
-          <p className="eyebrow inline-flex items-center gap-2 text-muted-foreground">
+          <p className="eyebrow flex items-center gap-2 text-muted-foreground">
             <MapPin className="h-4 w-4" /> {t(ui.contact.location)}
           </p>
-          <p className="mt-4 text-2xl sm:text-3xl">{t(profile.location)}</p>
+          <p className="mt-4 text-2xl lg:text-3xl">{t(profile.location)}</p>
         </div>
       </section>
     </>
