@@ -7,10 +7,10 @@ import kpsLogo from "@/assets/logo_li_kps.jpg.asset.json";
 import sanomaLogo from "@/assets/logo_li_sanoma.jpg.asset.json";
 import mcdonaldsLogo from "@/assets/logo_li_mcdonalds.jpg.asset.json";
 import portraitImg from "@/assets/oiva_salomaa_muotokuva.jpg.asset.json";
-import kirkkoImg from "@/assets/suomea_kirkko_kerrallaan_rajattu.jpg.asset.json";
-import malmiImg from "@/assets/malmin_perinto_rajattu.jpg.asset.json";
-import avaruusImg from "@/assets/avaruusharrastus_rajattu.jpg.asset.json";
-import mediaImg from "@/assets/media_murroksessa_rajattu.jpg.asset.json";
+import kirkkoImg from "@/assets/suomea_kirkko_kerrallaan_esikatselu.jpg.asset.json";
+import malmiImg from "@/assets/malmin_perinto_esikatselu.jpg.asset.json";
+import avaruusImg from "@/assets/avaruusharrastus_esikatselu.jpg.asset.json";
+import mediaImg from "@/assets/media_murroksessa_esikatselu.jpg.asset.json";
 
 export type Lang = "fi" | "en";
 /** A text in both site languages. */
@@ -23,8 +23,8 @@ export const profile = {
   name: "Oiva Salomaa",
   title: l("Journalismin opiskelija · Haaga-Helia", "Journalism student · Haaga-Helia"),
   tagline: l(
-    "Toimittaja ja viestijä, joka tekee huolellisesti taustoitettua journalismia ja seuraa taloutta, sijoittamista ja yhteiskuntaa.",
-    "Journalist and communicator producing well-researched stories, with a keen interest in economics, investing and society.",
+    "Journalismin opiskelija ja freelance-toimittaja. Kirjoitan ihmisistä, kulttuurista ja yhteiskunnasta.",
+    "Journalism student and freelance writer covering people, culture and society.",
   ),
   email: "oiva.salomaa@gmail.com",
   location: l("Helsinki", "Helsinki, Finland"),
@@ -43,8 +43,8 @@ export const about: L[] = [
     "My work is built on thorough research, clear expression and the ability to connect with very different people. Experience in sales at Sanoma Media Finland, at Veikkaus’s Casino Helsinki and as a youth leader for hearing-impaired children has taught me accuracy, responsibility and reliability in roles where there is no room for error.",
   ),
   l(
-    "Seuraan aktiivisesti taloutta, sijoittamista ja politiikkaa Suomessa, EU:ssa ja globaalisti. Tavoitteeni on toimittajan tehtävä valtakunnallisessa mediassa tai viestinnän tehtävät, esimerkiksi pörssiyhtiössä.",
-    "I closely follow economics, investing and politics in Finland, the EU and globally. My goal is a reporting role at a national news outlet or a position in corporate communications, for example at a listed company.",
+    "Seuraan uutisia ja yhteiskunnallista keskustelua laajasti, kotimaan asioista kansainväliseen politiikkaan. Tavoitteeni on toimittajan työ valtakunnallisessa mediassa tai yritysviestinnän tehtävät, esimerkiksi pörssiyhtiössä.",
+    "I follow the news and public debate closely, from Finnish affairs to international politics. My aim is to work as a reporter for a national news outlet or in corporate communications, for example at a listed company.",
   ),
 ];
 
@@ -70,12 +70,6 @@ export const direction: { title: L; text: L }[] = [
       "A strong interest in economics, investing and explaining market developments clearly.",
     ),
   },
-];
-
-export const keyFacts: { value: string; label: L }[] = [
-  { value: "4", label: l("julkaistua juttua Kuurojen Lehdessä", "stories published in Kuurojen Lehti") },
-  { value: "5", label: l("julkaisua 360journalismia-mediassa", "pieces for 360journalismia") },
-  { value: "4 v", label: l("kokemusta lasten ja nuorten ohjaajana", "years as a youth leader") },
 ];
 
 export const subscribeUrl = "https://kuurojenliitto.fi/kuurojen-lehti/lomake-tilaa-kuurojen-lehti/";
@@ -356,6 +350,7 @@ export const interests: L[] = [
   l("EU ja kansainvälinen politiikka", "EU and international affairs"),
   l("Median murros", "The changing media landscape"),
   l("Kuurojen kulttuuri ja historia", "Deaf culture and history"),
+  l("Suomen kulttuuri ja historia", "Finnish culture and history"),
 ];
 
 /** Interface strings. */
@@ -376,8 +371,8 @@ export const ui = {
   pub: {
     title: l("Julkaisut", "Published work"),
     intro: l(
-      "Henkilöjuttuja ja kolumneja Kuurojen Lehdessä sekä artikkeleita ja videojuttuja 360journalismia-mediassa. Uusin ensin.",
-      "Profiles and columns in Kuurojen Lehti, plus articles and video stories for 360journalismia. Newest first.",
+      "Henkilöjuttuja ja kolumneja Kuurojen Lehdessä sekä artikkeleita ja videojuttuja 360journalismia-mediassa.",
+      "Profiles and columns in Kuurojen Lehti, plus articles and video stories for 360journalismia.",
     ),
     magazine: l("Kuurojen Lehti", "Kuurojen Lehti"),
     magazineNote: l(
