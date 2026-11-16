@@ -22,3 +22,22 @@ describe("paywall", () => {
     for (const a of articles) expect(a.image).toMatch(/_esikatselu\.jpg$/);
   });
 });
+
+describe("copy rules", () => {
+  it("does not list deaf culture or corporate and investor communications as interests", async () => {
+    const { interests } = await import("@/content/portfolio");
+    const fi = interests.map((i) => i.fi);
+    expect(fi).not.toContain("Kuurojen kulttuuri ja historia");
+    expect(fi).not.toContain("Yritys- ja sijoittajaviestintä");
+  });
+
+  it("never mentions listed companies (pörssiyhtiö)", async () => {
+    const mod = await import("@/content/portfolio");
+    expect(JSON.stringify(mod)).not.toMatch(/pörssiyhti|listed compan/i);
+  });
+
+  it("includes the Nostalgiaradio show among the 360journalismia publications", async () => {
+    const { otherWork } = await import("@/content/portfolio");
+    expect(otherWork.some((w) => w.url.includes("nostalgiaradio-aikamatka-vuoteen-2016"))).toBe(true);
+  });
+});
