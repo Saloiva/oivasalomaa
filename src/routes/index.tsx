@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Oiva Salomaa, journalismin opiskelija ja freelance-toimittaja Helsingistä. Suuntana valtakunnallinen media ja pörssiyhtiöiden viestintä.",
+          "Oiva Salomaa, journalismin opiskelija ja freelance-toimittaja Helsingistä. Tavoitteena on toimittajan työ valtakunnallisessa mediassa tai yritysviestinnässä.",
       },
       { property: "og:title", content: "Oiva Salomaa – Toimittaja ja viestijä" },
       {

@@ -172,7 +172,7 @@ export type OtherWork = {
   credits: L;
   description: L;
   url: string;
-  platform: "web" | "instagram";
+  platform: "web" | "instagram" | "audio";
 };
 
 /** 360journalismia work, newest first. */
@@ -215,6 +215,21 @@ export const otherWork: OtherWork[] = [
     ),
     url: "https://www.360journalismia.fi/susijengi-huuma-ei-tayta-korisliigan-katsomoita/",
     platform: "web",
+  },
+  {
+    kind: l("Radio-ohjelma", "Radio show"),
+    title: "Nostalgiaradio: Aikamatka vuoteen 2016",
+    date: "13.3.2026",
+    credits: l(
+      "Reportteri Oiva Salomaa · Juontajat Miisa Miettinen ja Saana Korhonen",
+      "Reporter Oiva Salomaa · Hosts Miisa Miettinen and Saana Korhonen",
+    ),
+    description: l(
+      "Radio-ohjelma vie kuulijat kymmenen vuoden taakse vuoteen 2016. Ohjelmassa muistellaan vuoden trendejä ja tapahtumia vieraiden kanssa. Toimin ohjelmassa reportterina.",
+      "This radio show takes listeners ten years back to 2016. The hosts and their guests look back at the trends and events of that year. I worked on the show as a reporter.",
+    ),
+    url: "https://www.360journalismia.fi/nostalgiaradio-aikamatka-vuoteen-2016/",
+    platform: "audio",
   },
   {
     kind: l("Artikkeli", "Article"),
@@ -386,6 +401,7 @@ export const ui = {
     original: l("Alkuperäinen otsikko", "Original title"),
     openWeb: l("Lue juttu", "Read article"),
     openIg: l("Katso Instagramissa", "Watch on Instagram"),
+    openAudio: l("Kuuntele ohjelma", "Listen to the show"),
   },
   exp: {
     title: l("Työkokemus", "Experience"),

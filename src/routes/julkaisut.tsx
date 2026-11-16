@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Instagram, Newspaper } from "lucide-react";
+import { ArrowUpRight, Instagram, Newspaper, Radio } from "lucide-react";
 import { ArticleCard } from "@/components/portfolio/ArticleCard";
 import { PageHeader, SectionHeading } from "@/components/portfolio/SectionHeading";
 import { articles, otherWork, ui } from "@/content/portfolio";
@@ -11,12 +11,12 @@ export const Route = createFileRoute("/julkaisut")({
       { title: "Julkaisut – Oiva Salomaa" },
       {
         name: "description",
-        content: "Oiva Salomaan henkilöjutut ja kolumnit Kuurojen Lehdessä sekä artikkelit ja videot 360journalismia-mediassa.",
+        content: "Oiva Salomaan henkilöjutut ja kolumnit Kuurojen Lehdessä sekä artikkelit, videot ja radiotyö 360journalismia-mediassa.",
       },
       { property: "og:title", content: "Julkaisut – Oiva Salomaa" },
       {
         property: "og:description",
-        content: "Henkilöjuttuja, kolumneja, artikkeleita ja videojuttuja. Uusin ensin.",
+        content: "Oiva Salomaan henkilöjutut, kolumnit, artikkelit, videojutut ja radiotyö.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -59,7 +59,13 @@ function Publications() {
                 <div className="space-y-2">
                   <p className="eyebrow whitespace-nowrap text-muted-foreground">{w.date}</p>
                   <span className="eyebrow inline-flex items-center gap-1.5 rounded-full border border-border px-2.5 py-1">
-                    {w.platform === "instagram" ? <Instagram className="h-3 w-3" /> : <Newspaper className="h-3 w-3" />}
+                    {w.platform === "instagram" ? (
+                      <Instagram className="h-3 w-3" />
+                    ) : w.platform === "audio" ? (
+                      <Radio className="h-3 w-3" />
+                    ) : (
+                      <Newspaper className="h-3 w-3" />
+                    )}
                     {t(w.kind)}
                   </span>
                 </div>
@@ -71,7 +77,7 @@ function Publications() {
                   <p className="eyebrow mt-3 text-muted-foreground">{t(w.credits)}</p>
                 </div>
                 <span className="eyebrow inline-flex items-center gap-1 self-start whitespace-nowrap text-highlight md:pt-1">
-                  {t(w.platform === "instagram" ? ui.pub.openIg : ui.pub.openWeb)}
+                  {t(w.platform === "instagram" ? ui.pub.openIg : w.platform === "audio" ? ui.pub.openAudio : ui.pub.openWeb)}
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                 </span>
               </a>
